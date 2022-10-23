@@ -10,7 +10,7 @@ XuKaFy 希望你实现的系统有以下功能：
 
 ## 题解
 
-```asm
+```nasm
 org 07c00h 
 mov ax, cs
 mov ds, ax 

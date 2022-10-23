@@ -10,7 +10,7 @@
 
 1. 观察以下代码在 Racket v8.3 中的运行结果：
 
-   ```Scheme
+   ```scheme
    > cons
    #<procedure:cons>
    > if
@@ -25,7 +25,7 @@
 
 2. 观察以下代码：
 
-   ```Scheme
+   ```scheme
    (define (square-list items)
        (define (iter things answer)
        (if (null? things)
@@ -45,7 +45,7 @@
 
 > amb 求值器是一种用于解决非确定性计算问题的求值器。
 >
-> ```Scheme
+> ```scheme
 > (let ((a (amb 1 2)) 
 >       (b (amb 1 2))) 
 >   (require (< a b)) 
@@ -55,7 +55,7 @@
 > 这里，`(amb args...)` 表示的是这个变量有 `args...` 这么多种取值，`(require fun)` 表示的是要求 `fun` 必须成立。随着 `require` 越来越多，每个变量的取值可能会越来越少，最终收束于若干个解中。
 > `amb` 求值器是可以求多解问题的，也有遍历方法，例如：
 >
-> ```Scheme
+> ```scheme
 > (amb-possibility-list (+ (amb 1 2) (amb 3 4))) ; (4 5 5 6)
 > ```
 >
@@ -79,7 +79,7 @@ XuKaFy 想要利用 `amb` 求值器求解八皇后问题，你能帮帮他吗？
 
 #### 2
 
-```Scheme
+```scheme
 #lang racket
 
 (define (entry node) (mcar node))
@@ -124,7 +124,7 @@ XuKaFy 想要利用 `amb` 求值器求解八皇后问题，你能帮帮他吗？
 
 #### 3
 
-```Scheme
+```scheme
 #lang racket
 
 (define (entry node) (mcar node))
@@ -194,7 +194,7 @@ XuKaFy 想要利用 `amb` 求值器求解八皇后问题，你能帮帮他吗？
 
 #### 4
 
-```Scheme
+```scheme
 #lang racket
 
 (
@@ -212,7 +212,7 @@ XuKaFy 想要利用 `amb` 求值器求解八皇后问题，你能帮帮他吗？
 
 ### 📒 正式题目
 
-```Scheme
+```scheme
 #lang sicp
 
 ; algorithm
