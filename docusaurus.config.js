@@ -71,14 +71,28 @@ const config = {
         },
         items: [
           {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left'
+          },
+          {
             type: 'doc',
             docId: 'index',
+            label: 'Doc',
             position: 'left',
-            label: 'Document',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/Yaossg/site',
+            to: 'friends',
+            label: 'Friends', 
+            position: 'left'
+          },
+          {
+            href: 'https://space.bilibili.com/282144386',
+            label: 'Bilibili',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/Yaossg/',
             label: 'GitHub',
             position: 'right',
           },
@@ -90,37 +104,37 @@ const config = {
           {
             title: 'Quick Access',
             items: [
-              {
-                label: '🖥️ CNSS Recruit 2022 Dev',
-                to: 'docs/cnss/0',
-              },
-              {
-                label: '1.13 worldgen',
-                href: 'https://yaossg.com/blog/1-13-worldgen/',
-              },
-              {
-                label: 'Biome',
-                href: 'https://yaossg.com/biome',
-              },
-              {
-                label: 'Cripple C',
-                href: 'https://yaossg.com/doc/cripplec',
-              },
+              // {
+              //   label: '🖥️ CNSS Recruit 2022 Dev',
+              //   to: 'docs/cnss/0',
+              // },
+              // {
+              //   label: '1.13 worldgen',
+              //   href: 'https://yaossg.com/blog/1-13-worldgen/',
+              // },
+              // {
+              //   label: 'Biome',
+              //   href: 'https://yaossg.com/biome',
+              // },
+              // {
+              //   label: 'Cripple C',
+              //   href: 'https://yaossg.com/doc/cripplec',
+              // },
             ],
           },
           {
             title: 'Related Sites',
             items: [
+              // {
+              //   label: 'Yaossg\'s Homepage',
+              //   href: 'https://yaossg.com/',
+              // },
+              // {
+              //   label: 'Yaossg\'s Blog',
+              //   href: 'https://yaossg.com/blog/',
+              // },
               {
-                label: 'Yaossg\'s Homepage',
-                href: 'https://yaossg.com/',
-              },
-              {
-                label: 'Yaossg\'s Blog',
-                href: 'https://yaossg.com/blog/',
-              },
-              {
-                label: 'Yaossg\'s Doc',
+                label: 'Yaossg\'s Alternative Doc',
                 href: 'https://yaossg.com/doc/',
               },
             ],

@@ -10,7 +10,9 @@ sidebar_position: 0
 
 下表中整理汇总了原版 79 个生物群系的 23 个属性。（不包含对于所有生物群系都相同的属性和部分特有属性，参见后文）
 
-<iframe src="https://yaossg.com/biome/resources/data.htm" width="800" height="640"></iframe>
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<iframe src={useBaseUrl("/data/data.htm")} width="800" height="640"></iframe>
 
 -----
 
