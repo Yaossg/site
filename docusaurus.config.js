@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Yaossg\'s Site',
-  tagline: 'documentation repository',
+  tagline: 'blog & doc',
   url: 'https://yaossg.com',
   baseUrl: '/site/',
   onBrokenLinks: 'throw',
@@ -43,6 +43,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -125,14 +127,6 @@ const config = {
           {
             title: 'Related Sites',
             items: [
-              // {
-              //   label: 'Yaossg\'s Homepage',
-              //   href: 'https://yaossg.com/',
-              // },
-              // {
-              //   label: 'Yaossg\'s Blog',
-              //   href: 'https://yaossg.com/blog/',
-              // },
               {
                 label: 'Yaossg\'s Alternative Doc',
                 href: 'https://yaossg.com/doc/',

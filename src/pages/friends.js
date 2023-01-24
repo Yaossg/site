@@ -122,7 +122,7 @@ function FriendCard({avatar, link, name, desc}) {
         <div className={clsx('col col--4', styles.cell)}>
             <div className={styles.card}>
                 <a href={link}>
-                    <div className={styles["frind-ship"]}>
+                    <div className={styles["friend-ship"]}>
                         <img src={avatar} height="100" width="100"/>
                         <div>
                             <h1>{name}</h1>
