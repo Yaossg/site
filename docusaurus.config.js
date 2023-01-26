@@ -15,7 +15,7 @@ const config = {
   baseUrl: '/site/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/sausage.png',
 
   // deployment
   organizationName: 'Yaossg',
@@ -69,7 +69,7 @@ const config = {
         title: 'Yaossg\'s Site',
         logo: {
           alt: 'Yaossg\'s Site',
-          src: 'img/logo.svg',
+          src: 'img/sausage-128.png',
         },
         items: [
           {
@@ -106,22 +106,10 @@ const config = {
           {
             title: 'Quick Access',
             items: [
-              // {
-              //   label: '🖥️ CNSS Recruit 2022 Dev',
-              //   to: 'docs/cnss/0',
-              // },
-              // {
-              //   label: '1.13 worldgen',
-              //   href: 'https://yaossg.com/blog/1-13-worldgen/',
-              // },
-              // {
-              //   label: 'Biome',
-              //   href: 'https://yaossg.com/biome',
-              // },
-              // {
-              //   label: 'Cripple C',
-              //   href: 'https://yaossg.com/doc/cripplec',
-              // },
+              {
+                label: 'End Poem',
+                href: 'https://yaossg.com/end-poem/',
+              },
             ],
           },
           {

@@ -10,6 +10,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <img className="hero__substitle" src={require('@site/static/img/sausage-128.png').default} />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
       </div>
@@ -19,39 +20,46 @@ function HomepageHeader() {
 
 const FeatureList = [
   {
-    title: 'Sausageous',
-    Svg: require('@site/static/img/logo.svg').default,
+    title: 'Programmer',
+    img: require('@site/static/img/cpp_logo.png').default,
     description: (
       <>
-        A quick fox jumps over the brown lazy dog.
+        Most familiar with C/C++ Java Kotlin.<br/>
+        Also understands Python C# and so on.<br/>
+        Active contributor of <a href="https://cppreference.com">cppreference</a>.<br/>
+        Treats programming as a life-long hobby.
       </>
     ),
   },
   {
-    title: 'All in one solution',
-    Svg: require('@site/static/img/logo.svg').default,
+    title: 'Minecrafter',
+    img: require('@site/static/img/crafting_table.webp').default,
     description: (
       <>
-        A quick fox jumps over the brown lazy dog.
+        Faithful Minecraft player for a decade.<br/>  
+        <del>Once amateur</del> now cloud cber and modder.<br/>
+        Enthusiastic server owner. Tech modpack lover.<br/>
+        As well as a Terrarian for long.
       </>
     ),
   },
   {
-    title: 'Powered by Yaossg',
-    Svg: require('@site/static/img/logo.svg').default,
+    title: 'UESTCer',
+    img: require('@site/static/img/UESTC.png').default,
     description: (
       <>
-        A quick fox jumps over the brown lazy dog.
+        Freshman in School of Information and Communication Engineering, UESTC.<br/>
+        Sophomore in School of Computer Science and Engineering (School of Cybersecurity), UESTC.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({img, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureImg} src={img} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

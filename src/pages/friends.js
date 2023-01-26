@@ -45,7 +45,7 @@ const FriendList = [
     },
     {
         "avatar": "https://blog.stapxs.cn/usr/uploads/2020/03/2635148446.jpg",
-        "link": "https://doodlehuang.wordpress.com/",
+        "link": "https://doodlehuang.com/",
         "name": "Doodle",
         "desc": "DoodleHuang"
     },
