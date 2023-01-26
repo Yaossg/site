@@ -23,7 +23,7 @@ const FriendList = [
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
         "link": "https://blog.zapic.moe/",
         "name": "Zapic",
-        "desc": "中推顶流"
+        "desc": "中推顶流榨批客"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=100",
@@ -77,13 +77,13 @@ const FriendList = [
         "avatar": "https://malossov.github.io/uploads/avator.png",
         "link": "https://malossov.github.io/",
         "name": "Malossov",
-        "desc": "书扬"
+        "desc": "秧黍藜"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=1641064392&s=100",
         "link": "https://zbwer.github.io/",
         "name": "zbwer",
-        "desc": "bwgg"
+        "desc": "FsAnna"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/108183563",
