@@ -107,7 +107,7 @@ const config = {
             title: 'Quick Access',
             items: [
               {
-                label: 'End Poem',
+                label: 'Online End Poem',
                 href: 'https://yaossg.com/end-poem/',
               },
             ],

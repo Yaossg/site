@@ -13,6 +13,7 @@ function HomepageHeader() {
         <img className="hero__substitle" src={require('@site/static/img/sausage-128.png').default} />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p>路漫漫其修远兮，吾将上下而求索</p>
       </div>
     </header>
   );
