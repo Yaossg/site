@@ -62,19 +62,19 @@ $$
 - 估计或检验 $\mu$，$\sigma$ 已知
 
 $$
-\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)
+U=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)
 $$
 
 - 估计或检验 $\mu$，$\sigma$ 未知
 
 $$
-\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)
+T=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)
 $$
 
 - 估计或检验 $\sigma$，$\mu$ 已知
 
 $$
-\dfrac{n-1}{\sigma^2}S^2\sim\chi^2(n-1)
+\chi^2=\dfrac{n-1}{\sigma^2}S^2\sim\chi^2(n-1)
 $$
 
 第一类错误：弃真（犯错概率为 $\alpha$）
