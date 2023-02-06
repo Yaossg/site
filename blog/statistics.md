@@ -57,21 +57,21 @@ L=\prod_{i=1}^nP(X_i=x_i)\\
 \dfrac{\partial \ln L}{\partial\theta}=0
 $$
 
-### 区间估计和假设检验
+### 区间估计与假设检验
 
-- 估计或检验 $\mu$，$\sigma$ 已知
+- 估计或检验 $\mu$，当 $\sigma$ 已知时
 
 $$
 U=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)
 $$
 
-- 估计或检验 $\mu$，$\sigma$ 未知
+- 估计或检验 $\mu$，当 $\sigma$ 未知时
 
 $$
 T=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)
 $$
 
-- 估计或检验 $\sigma$，$\mu$ 已知
+- 估计或检验 $\sigma$，当 $\mu$ 已知时
 
 $$
 \chi^2=\dfrac{n-1}{\sigma^2}S^2\sim\chi^2(n-1)
