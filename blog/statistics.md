@@ -71,7 +71,7 @@ $$
 T=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)
 $$
 
-- 估计或检验 $\sigma$，当 $\mu$ 已知时
+- 估计或检验 $\sigma$，当 $\mu$ 未知时
 
 $$
 \chi^2=\dfrac{n-1}{\sigma^2}S^2\sim\chi^2(n-1)
