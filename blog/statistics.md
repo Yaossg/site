@@ -37,7 +37,7 @@ $$
 
 又叫费希尔（Fisher）分布
 $$
-F=\dfrac{X/n_1}{Y/n_2}\\
+F=\dfrac{X/n_1}{Y/n_2}\sim F(n_1,n_2)\\
 \text{ 其中 } X\sim\chi^2(n_1), Y\sim\chi^2(n_2)
 $$
 
