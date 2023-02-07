@@ -14,13 +14,15 @@ tags:
 
 $$
 X\sim N(\mu, \sigma^2)\\
+E(X)=\mu,D(X)=\sigma^2
 $$
 
 ### 卡方分布
 
 $$
 \chi^2=\sum_{i=1}^n X_i^2\sim\chi^2(n)\\
-\text{ 其中 } X \sim N(0, 1)
+\text{ 其中 } X \sim N(0, 1)\\
+E(\chi^2)=n,D(\chi^2)=2n
 $$
 
 ### t 分布
@@ -33,7 +35,7 @@ $$
 
 ### F 分布
 
-又叫费舍尔（Fisher）分布
+又叫费希尔（Fisher）分布
 $$
 F=\dfrac{X/n_1}{Y/n_2}\\
 \text{ 其中 } X\sim\chi^2(n_1), Y\sim\chi^2(n_2)
