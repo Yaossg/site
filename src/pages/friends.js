@@ -38,12 +38,6 @@ const FriendList = [
         "desc": "土球"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/32478104",
-        "link": "https://github.com/KunoSayo",
-        "name": "KunoSayo",
-        "desc": "ljyys"
-    },
-    {
         "avatar": "https://blog.stapxs.cn/usr/uploads/2020/03/2635148446.jpg",
         "link": "https://doodlehuang.com/",
         "name": "Doodle",
@@ -115,6 +109,48 @@ const FriendList = [
         "name": "Sary",
         "desc": "fattyrays"
     },
+    {
+        "avatar": "https://mrcai.dev/_astro/avatar.a5e28833.webp",
+        "link": "https://mrcai.dev/",
+        "name": "mrcai",
+        "desc": "fullstack developer"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2624646185&s=100",
+        "link": "https://focess.top/",
+        "name": "sumijie",
+        "desc": "MidCoard"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
+        "link": "https://songyu318.github.io/",
+        "name": "SoCoco",
+        "desc": "羽姐姐"
+    },
+    {
+        "avatar": "https://edwardssss.github.io/user/show_myself.png",
+        "link": "https://edwardssss.github.io/",
+        "name": "Edwardssss",
+        "desc": "熊爷"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=100",
+        "link": "https://www.cnblogs.com/IrisHyaline",
+        "name": "IrisHyaline",
+        "desc": "透明桥，桥姐"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2083953860&s=100",
+        "link": "https://blog.csdn.net/weixin_44111457",
+        "name": "lsr",
+        "desc": "融融"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/32266528?v=4",
+        "link": "https://github.com/Zhengfourth",
+        "name": "Zhengfourth",
+        "desc": "国集爷"
+    }
 ]
 
 function FriendCard({avatar, link, name, desc}) {
@@ -141,7 +177,7 @@ function AllFriends() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              {FriendList.map((props, idx) => (
+              {FriendList.sort((a, b)=>Math.random() < 0.5 ? 1 : -1).map((props, idx) => (
                 <FriendCard key={idx} {...props} />
               ))}
             </div>
