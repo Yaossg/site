@@ -14,7 +14,7 @@ const FriendList = [
         "desc": "林槐"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2734825077&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2734825077&s=640",
         "link": "https://switefaster.github.io/",
         "name": "Sebrarin",
         "desc": "Switefaster"
@@ -23,10 +23,10 @@ const FriendList = [
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
         "link": "https://blog.zapic.moe/",
         "name": "Zapic",
-        "desc": "中推顶流榨批客"
+        "desc": "榨批客"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
         "link": "https://izzel.io/",
         "name": "IzzelAliz",
         "desc": "海螺"
@@ -62,7 +62,7 @@ const FriendList = [
         "desc": "X. F. K."
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
         "link": "https://www.cnblogs.com/timlzh",
         "name": "Timlzh",
         "desc": "HiTlZm"
@@ -74,7 +74,7 @@ const FriendList = [
         "desc": "秧黍藜"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=1641064392&s=100",
+        "avatar": "https://avatars.githubusercontent.com/u/49082837?v=4",
         "link": "https://zbwer.github.io/",
         "name": "zbwer",
         "desc": "FsAnna"
@@ -92,10 +92,10 @@ const FriendList = [
         "desc": "上行线路"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=640",
         "link": "https://codeforces.com/profile/lotato",
         "name": "lotato",
-        "desc": "土豆，我的土豆"
+        "desc": "土豆"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/69978374?v=4",
@@ -113,10 +113,10 @@ const FriendList = [
         "avatar": "https://mrcai.dev/_astro/avatar.a5e28833.webp",
         "link": "https://mrcai.dev/",
         "name": "mrcai",
-        "desc": "fullstack developer"
+        "desc": "mrcaidev"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2624646185&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2624646185&s=640",
         "link": "https://focess.top/",
         "name": "sumijie",
         "desc": "MidCoard"
@@ -134,13 +134,13 @@ const FriendList = [
         "desc": "熊爷"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
         "link": "https://www.cnblogs.com/IrisHyaline",
         "name": "IrisHyaline",
-        "desc": "透明桥，桥姐"
+        "desc": "透明桥"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2083953860&s=100",
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2083953860&s=640",
         "link": "https://blog.csdn.net/weixin_44111457",
         "name": "lsr",
         "desc": "融融"
@@ -177,7 +177,7 @@ function AllFriends() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              {FriendList.sort((a, b)=>Math.random() < 0.5 ? 1 : -1).map((props, idx) => (
+              {FriendList.sort(() => Math.random() < 0.5 ? 1 : -1).map((props, idx) => (
                 <FriendCard key={idx} {...props} />
               ))}
             </div>
