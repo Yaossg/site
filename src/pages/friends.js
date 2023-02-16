@@ -38,7 +38,7 @@ const FriendList = [
         "desc": "土球"
     },
     {
-        "avatar": "https://blog.stapxs.cn/usr/uploads/2020/03/2635148446.jpg",
+        "avatar": "https://www.gravatar.com/avatar/5b78129e44dce1ca04dd5a6d785bcb2a",
         "link": "https://doodlehuang.com/",
         "name": "Doodle",
         "desc": "DoodleHuang"
@@ -150,6 +150,12 @@ const FriendList = [
         "link": "https://github.com/Zhengfourth",
         "name": "Zhengfourth",
         "desc": "国集爷"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/32478104",
+        "link": "https://github.com/KunoSayo",
+        "name": "KunoSayo",
+        "desc": "ljyys"
     }
 ]
 
@@ -177,7 +183,7 @@ function AllFriends() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              {FriendList.sort(() => Math.random() < 0.5 ? 1 : -1).map((props, idx) => (
+              {FriendList.map((props, idx) => (
                 <FriendCard key={idx} {...props} />
               ))}
             </div>
@@ -189,6 +195,7 @@ function AllFriends() {
 
 export default function Friends() {
     const {siteConfig} = useDocusaurusContext();
+    FriendList.sort(() => Math.random() < 0.5 ? 1 : -1);
     return (
       <Layout
         title="Yaossg's Friends">
