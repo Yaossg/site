@@ -195,7 +195,6 @@ function AllFriends() {
 
 export default function Friends() {
     const {siteConfig} = useDocusaurusContext();
-    FriendList.sort(() => Math.random() < 0.5 ? 1 : -1);
     return (
       <Layout
         title="Yaossg's Friends">
