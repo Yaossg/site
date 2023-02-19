@@ -7,7 +7,23 @@
 
 ## Catalogue
 
-![](catalogue.png)
+```mermaid
+graph
+
+1[Chapter 1: Introduction]
+2[Chapter 2: Data Abstraction]
+3[Chapter 3: Church Numerals: Increment]
+4[Chapter 4: Church Numerals: Decrement]
+5[Chapter 5: Fixed Points and Recursion]
+6[Chapter 6: Minimal Calculus]
+
+
+1-->2
+1-->3
+2-->4
+3-->4
+4-->5
+```
 
 ## Reference
 
