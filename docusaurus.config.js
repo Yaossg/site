@@ -115,15 +115,23 @@ const config = {
                 label: 'Online End Poem',
                 href: 'https://yaossg.com/end-poem/',
               },
-            ],
+              {
+                label: 'Site Source Code',
+                href: 'https://github.com/Yaossg/site',
+              },
+            ]
           },
           {
             title: 'Related Sites',
             items: [
               {
-                label: 'Yaossg\'s Alternative Doc',
-                href: 'https://yaossg.com/doc/',
+                label: 'Powered By Docusaurus',
+                href: 'https://docusaurus.io/',
               },
+              {
+                label: 'Support Me Via Afdian',
+                href: 'https://afdian.net/a/Yaossg'
+              }
             ],
           },
         ],
