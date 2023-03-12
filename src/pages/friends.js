@@ -59,7 +59,7 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/36410093",
         "link": "https://xukafy.github.io/",
         "name": "XuKaFy",
-        "desc": "X. F. K."
+        "desc": "X. K. F."
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
@@ -156,6 +156,12 @@ const FriendList = [
         "link": "https://github.com/KunoSayo",
         "name": "KunoSayo",
         "desc": "ljyys"
+    },
+    {
+        "avatar": "http://www.sh1no.icu/avr.png",
+        "link": "http://www.sh1no.icu/",
+        "name": "Shino",
+        "desc": "诗诺"
     }
 ]
 
