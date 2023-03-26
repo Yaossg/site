@@ -87,7 +87,7 @@ const FriendList = [
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/61999173",
-        "link": "https://blog.hareta.ren/",
+        "link": "https://blog.skyecho.fun/",
         "name": "syrinka",
         "desc": "上行线路"
     },
