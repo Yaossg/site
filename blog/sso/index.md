@@ -218,33 +218,39 @@ OOO OOO OOO OOO OOO OOO OOO OOO OOO OOO
 
 ```cpp
 struct Observer {
-    Observer() = default;
-    Observer(Observer&&) noexcept {
-        std::cout << "move" << std::endl;
+    int i;
+    Observer(int i): i(i) {
+        std::cout << " make " << i;
     }
-    Observer(const Observer&) {
-        std::cout << "copy" << std::endl;
+    Observer(Observer&& other) noexcept: i(other.i) {
+        std::cout << " move " << i;
+    }
+    Observer(const Observer& other): i(other.i) {
+        std::cout << " copy " << i;
     }
 };
 
 int main() {
     std::vector<Observer> observers;
-    observers.emplace_back();
-    observers.emplace_back();
-    observers.emplace_back();
-    observers.emplace_back();
+    std::cout << "line 1: ";
+    observers.emplace_back(1);
+    std::cout << std::endl << "line 2: ";
+    observers.emplace_back(2);
+    std::cout << std::endl << "line 3: ";
+    observers.emplace_back(3);
+    std::cout << std::endl << "line 4: ";
+    observers.emplace_back(4);
 }
 ```
 
 输出：
 
 ```
-move
-move
-move
+line 1:  make 1
+line 2:  make 2 move 1
+line 3:  make 3 move 1 move 2
+line 4:  make 4
 ```
-
-推断可知，第一个 move 发生在第二行，后两个 move 发生在第三行。
 
 需要注意的是，`Observer` 移动构造器的 `noexcept` 是不可以省略的，否则它会优先选择复制构造器而不是可能抛出异常的移动构造器。
 
