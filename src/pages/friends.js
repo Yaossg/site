@@ -38,7 +38,7 @@ const FriendList = [
         "desc": "土球"
     },
     {
-        "avatar": "https://www.gravatar.com/avatar/5b78129e44dce1ca04dd5a6d785bcb2a",
+        "avatar": "https://assets.doodlehuang.com/myface.png",
         "link": "https://doodlehuang.com/",
         "name": "Doodle",
         "desc": "DoodleHuang"
@@ -65,7 +65,7 @@ const FriendList = [
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
         "link": "https://www.cnblogs.com/timlzh",
         "name": "Timlzh",
-        "desc": "HiTlZm"
+        "desc": "¯\\_(ツ)_/¯"
     },
     {
         "avatar": "https://malossov.github.io/uploads/avator.png",
