@@ -5,7 +5,17 @@ tags:
   - db
 ---
 
-# 速通数据库
+- DBS 数据库系统
+- DB 数据库
+- DBMS 数据库管理系统
+
+```mermaid
+graph LR
+subgraph DBS
+DB
+DMBS
+end
+```
 
 ## 数据模型
 
@@ -49,9 +59,9 @@ tags:
 
 ### Key
 
-键，码（Key）：唯一区分不同元组的属性或属性组合
+键，码（Key）：唯一区分不同元组的属性或属性组合。
 
-一个关系可以有多个候选键（Candidate Key），选定一种一个作为主键（Primary Key）。
+一个关系可以有多个候选键（Candidate Key），选定其中一个作为主键（Primary Key）。
 
 候选键的属性称为主属性。
 
