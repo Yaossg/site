@@ -162,6 +162,12 @@ const FriendList = [
         "link": "http://www.sh1no.icu/",
         "name": "Shino",
         "desc": "诗诺"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2723980493&s=640",
+        "link": "https://je3ter.github.io/",
+        "name": "Je3ter",
+        "desc": "安娜苏"
     }
 ]
 
