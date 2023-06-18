@@ -164,10 +164,46 @@ const FriendList = [
         "desc": "诗诺"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2723980493&s=640",
+        "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
         "link": "https://je3ter.github.io/",
         "name": "Je3ter",
         "desc": "安娜苏"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
+        "link": "https://my.minecraft.kim/",
+        "name": "HikariLan",
+        "desc": "贺兰星辰"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=185248912&s=640",
+        "link": "https://www.riojasonc.com/",
+        "name": "RioJasonC",
+        "desc": ""
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
+        "link": "https://touhouxingchen.github.io/",
+        "name": "XCCY",
+        "desc": "星辰春雨"
+    },
+    {
+        "avatar": "https://lostacnet.top/images/avatar.jpg",
+        "link": "https://lostacnet.top/",
+        "name": "LO_StacNet",
+        "desc": ""
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/86053421?v=4",
+        "link": "https://ericzhang1412.github.io/",
+        "name": "EricZhang",
+        "desc": ""
+    },
+    {
+        "avatar": "https://touhouxingchen.github.io/image/xfzn.png",
+        "link": "https://dummywj.github.io/",
+        "name": "Cherry_ywj",
+        "desc": ""
     }
 ]
 
