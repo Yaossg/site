@@ -89,7 +89,7 @@ const FriendList = [
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/61999173",
-        "link": "https://blog.skyecho.fun/",
+        "link": "https://blog.hareta.ren",
         "name": "syrinka"
     },
     {
@@ -155,7 +155,7 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
         "link": "https://touhouxingchen.github.io/",
-        "name": "XCCY"
+        "name": "X. C. C. Y."
     },
     {
         "avatar": "https://lostacnet.top/images/avatar.jpg",
