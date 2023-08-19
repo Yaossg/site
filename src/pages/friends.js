@@ -58,7 +58,7 @@ const FriendList = [
         "name": "sake"
     },
     {
-        "avatar": "https://4ever-xxxl.github.io/img/avatar.jpg",
+        "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
         "link": "https://4ever-xxxl.github.io/",
         "name": "xlykle"
     },
