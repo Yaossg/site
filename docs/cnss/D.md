@@ -97,3 +97,28 @@ times 510-($-$$) db 0
 dw 0xaa55
 ```
 
+## 运行方式
+
+```bash
+nasm boot.asm -o boot.bin
+dd  if=boot.bin  of=a.img  bs=512  count=1  conv=notrunc
+```
+
+生成镜像之后用虚拟机启动
+
+## 实现方式
+
+```mermaid
+flowchart
+	KB[键盘输入]
+	KB-->普通字符-->输出字符-->KB2
+	KB-->C[控制字符]
+	C-->NL[换行]-->NLS[行列信息压栈\n行号加一\n列号归零]-->KB2
+	C-->BS[回退]
+	BS-->|首行行首|KB2
+	BS-->|行首|BL[行列信息弹栈\n恢复至上一行行末]-->KB2
+	BS-->|非行首|BSS[列号减一\n输出空格\n列号减一]-->KB2
+	KB2[下一循环]-->KB
+	
+```
+
