@@ -79,7 +79,7 @@ const FriendList = [
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/49082837?v=4",
-        "link": "https://zbwer.github.io/",
+        "link": "https://blog.zbwer.work/",
         "name": "zbwer"
     },
     {
@@ -108,7 +108,7 @@ const FriendList = [
         "name": "fattyrays"
     },
     {
-        "avatar": "https://mrcai.dev/_astro/avatar.a5e28833.webp",
+        "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
         "link": "https://mrcai.dev/",
         "name": "mrcaidev"
     },
@@ -121,11 +121,6 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
         "link": "https://songyu318.github.io/",
         "name": "SoCoco"
-    },
-    {
-        "avatar": "https://edwardssss.github.io/user/show_myself.png",
-        "link": "https://edwardssss.github.io/",
-        "name": "Edwardssss"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
@@ -143,19 +138,29 @@ const FriendList = [
         "name": "Shino"
     },
     {
+        "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
+        "link": "https://ganqiu.github.io/",
+        "name": "Ganqiu"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
         "link": "https://je3ter.github.io/",
         "name": "Je3ter"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=185248912&s=640",
-        "link": "https://www.riojasonc.com/",
-        "name": "RioJasonC"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
         "link": "https://touhouxingchen.github.io/",
         "name": "X. C. C. Y."
+    },
+    {
+        "avatar": "https://image.foxsuzuran.top/images/2023/04/14/QQ20230108024840.jpg",
+        "link": "https://blog.foxsuzuran.top/",
+        "name": "FoxSuzuran"
+    },
+    {
+        "avatar": "https://edwardssss.github.io/user/show_myself.png",
+        "link": "https://edwardssss.github.io/",
+        "name": "Edwardssss"
     },
     {
         "avatar": "https://lostacnet.top/images/avatar.jpg",
@@ -167,16 +172,6 @@ const FriendList = [
         "link": "https://ericzhang1412.github.io/",
         "name": "EricZhang"
     },
-    {
-        "avatar": "https://touhouxingchen.github.io/image/xfzn.png",
-        "link": "https://dummywj.github.io/",
-        "name": "Cherry_ywj"
-    }, 
-    {
-        "avatar": "https://image.foxsuzuran.top/images/2023/04/14/QQ20230108024840.jpg",
-        "link": "https://blog.foxsuzuran.top/",
-        "name": "FoxSuzuran"
-    }
 ]
 
 function FriendCard({avatar, link, name}) {
