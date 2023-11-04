@@ -18,7 +18,7 @@ const FriendList = [
         "name": "Sebrarin"
     },
     {
-        "avatar": "./img/sausage-128.png",
+        "avatar": "./img/no-avatar.svg",
         "link": ".",
         "name": ""
     },
@@ -63,7 +63,7 @@ const FriendList = [
         "name": "SoCoco"
     },
     {
-        "avatar": "./img/sausage-128.png",
+        "avatar": "./img/no-avatar.svg",
         "link": ".",
         "name": ""
     },
@@ -168,7 +168,7 @@ const FriendList = [
         "name": "IgnotusJee"
     },
     {
-        "avatar": "./img/sausage-128.png",
+        "avatar": "./img/no-avatar.svg",
         "link": ".",
         "name": ""
     },
