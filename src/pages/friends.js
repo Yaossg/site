@@ -8,9 +8,9 @@ import styles from './friends.module.css';
 
 const FriendList = [
     {
-        "avatar": "https://avatars.githubusercontent.com/u/42486439",
-        "link": "https://blog.stapxs.cn",
-        "name": "Stapxs"
+        "avatar": "https://avatars.githubusercontent.com/u/8004211",
+        "link": "https://blog.ustc-zzzz.net/",
+        "name": "ustc-zzzz"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2734825077&s=640",
@@ -18,54 +18,14 @@ const FriendList = [
         "name": "Sebrarin"
     },
     {
-        "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
-        "link": "https://blog.zapic.moe/",
-        "name": "Zapic"
-    },
-    {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
-        "link": "https://izzel.io/",
-        "name": "IzzelAliz"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/8004211",
-        "link": "https://blog.ustc-zzzz.net/",
-        "name": "ustc-zzzz"
-    },
-    {
-        "avatar": "https://assets.doodlehuang.com/myface.png",
-        "link": "https://doodlehuang.com/",
-        "name": "Doodle H."
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/32266528?v=4",
-        "link": "https://github.com/Zhengfourth",
-        "name": "Zhengfourth"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
-        "link": "https://my.minecraft.kim/",
-        "name": "HikariLan"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/32478104",
-        "link": "https://github.com/KunoSayo",
-        "name": "KunoSayo"
+        "avatar": "./img/sausage-128.png",
+        "link": ".",
+        "name": ""
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/64351788",
         "link": "https://fullstack-sake.github.io/",
-        "name": "sake"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
-        "link": "https://4ever-xxxl.github.io/",
-        "name": "xlykle"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/36410093",
-        "link": "https://xukafy.github.io/",
-        "name": "XuKaFy"
+        "name": "fullstack-sake"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
@@ -73,9 +33,9 @@ const FriendList = [
         "name": "Timlzh"
     },
     {
-        "avatar": "https://malossov.github.io/uploads/avator.png",
-        "link": "https://malossov.github.io/",
-        "name": "Malossov"
+        "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
+        "link": "https://mrcai.dev/",
+        "name": "mrcaidev"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/49082837?v=4",
@@ -93,6 +53,66 @@ const FriendList = [
         "name": "syrinka"
     },
     {
+        "avatar": "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
+        "link": "http://wangcr.top/",
+        "name": "fattyrays"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
+        "link": "https://songyu318.github.io/",
+        "name": "SoCoco"
+    },
+    {
+        "avatar": "./img/sausage-128.png",
+        "link": ".",
+        "name": ""
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/42486439",
+        "link": "https://blog.stapxs.cn",
+        "name": "Stapxs"
+    },
+    {
+        "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
+        "link": "https://blog.zapic.moe/",
+        "name": "Zapic"
+    },
+    {
+        "avatar": "https://assets.doodlehuang.com/myface.png",
+        "link": "https://doodlehuang.com/",
+        "name": "Doodle H."
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/32478104",
+        "link": "https://github.com/KunoSayo",
+        "name": "KunoSayo"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
+        "link": "https://izzel.io/",
+        "name": "IzzelAliz"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
+        "link": "https://my.minecraft.kim/",
+        "name": "HikariLan"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
+        "link": "https://4ever-xxxl.github.io/",
+        "name": "xlykle"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/36410093",
+        "link": "https://xukafy.github.io/",
+        "name": "XuKaFy"
+    },
+    {
+        "avatar": "https://malossov.github.io/uploads/avator.png",
+        "link": "https://malossov.github.io/",
+        "name": "Malossov"
+    },
+    {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=640",
         "link": "https://codeforces.com/profile/lotato",
         "name": "lotato"
@@ -101,26 +121,6 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/69978374?v=4",
         "link": "https://github.com/RisingEntropy",
         "name": "R. Entropy"
-    },
-    {
-        "avatar": "https://fattyray.github.io/fattyrays_homepage/profile.jpg",
-        "link": "https://fattyray.github.io/fattyrays_homepage/",
-        "name": "fattyrays"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
-        "link": "https://mrcai.dev/",
-        "name": "mrcaidev"
-    },
-    {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2624646185&s=640",
-        "link": "https://focess.top/",
-        "name": "sumijie"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
-        "link": "https://songyu318.github.io/",
-        "name": "SoCoco"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
@@ -136,11 +136,6 @@ const FriendList = [
         "avatar": "http://www.sh1no.icu/avr.png",
         "link": "http://www.sh1no.icu/",
         "name": "Shino"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
-        "link": "https://ganqiu.github.io/",
-        "name": "Ganqiu"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
@@ -163,14 +158,19 @@ const FriendList = [
         "name": "Edwardssss"
     },
     {
-        "avatar": "https://lostacnet.top/images/avatar.jpg",
-        "link": "https://lostacnet.top/",
-        "name": "LO_StacNet"
+        "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
+        "link": "https://ganqiu.github.io/",
+        "name": "Ganqiu"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/86053421?v=4",
-        "link": "https://ericzhang1412.github.io/",
-        "name": "EricZhang"
+        "avatar": "https://avatars.githubusercontent.com/u/57258888?v=4",
+        "link": "https://ignotusjee.github.io/",
+        "name": "IgnotusJee"
+    },
+    {
+        "avatar": "./img/sausage-128.png",
+        "link": ".",
+        "name": ""
     },
 ]
 
