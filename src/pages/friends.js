@@ -69,7 +69,7 @@ const FriendList = [
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
-        "link": "https://www.cnblogs.com/timlzh",
+        "link": "https://timlzh.com/",
         "name": "Timlzh"
     },
     {
