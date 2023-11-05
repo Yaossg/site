@@ -23,6 +23,16 @@ const FriendList = [
         "name": ""
     },
     {
+        "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
+        "link": "https://mrcai.dev/",
+        "name": "mrcaidev"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/61999173",
+        "link": "https://blog.hareta.ren",
+        "name": "syrinka"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/64351788",
         "link": "https://fullstack-sake.github.io/",
         "name": "fullstack-sake"
@@ -33,11 +43,6 @@ const FriendList = [
         "name": "Timlzh"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
-        "link": "https://mrcai.dev/",
-        "name": "mrcaidev"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/49082837?v=4",
         "link": "https://blog.zbwer.work/",
         "name": "zbwer"
@@ -46,11 +51,6 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/108183563",
         "link": "https://zzzremake.github.io/",
         "name": "ZzzRemake"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/61999173",
-        "link": "https://blog.hareta.ren",
-        "name": "syrinka"
     },
     {
         "avatar": "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
@@ -66,11 +66,6 @@ const FriendList = [
         "avatar": "./img/no-avatar.svg",
         "link": ".",
         "name": ""
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/42486439",
-        "link": "https://blog.stapxs.cn",
-        "name": "Stapxs"
     },
     {
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
@@ -93,9 +88,14 @@ const FriendList = [
         "name": "IzzelAliz"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
-        "link": "https://my.minecraft.kim/",
-        "name": "HikariLan"
+        "avatar": "./img/no-avatar.svg",
+        "link": ".",
+        "name": ""
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": ".",
+        "name": ""
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
@@ -108,9 +108,9 @@ const FriendList = [
         "name": "XuKaFy"
     },
     {
-        "avatar": "https://malossov.github.io/uploads/avator.png",
-        "link": "https://malossov.github.io/",
-        "name": "Malossov"
+        "avatar": "http://www.sh1no.icu/avr.png",
+        "link": "http://www.sh1no.icu/",
+        "name": "Shino"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=640",
@@ -123,19 +123,19 @@ const FriendList = [
         "name": "R. Entropy"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
-        "link": "https://www.cnblogs.com/IrisHyaline",
-        "name": "IrisHyaline"
-    },
-    {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2083953860&s=640",
         "link": "https://blog.csdn.net/weixin_44111457",
         "name": "lsr"
     },
     {
-        "avatar": "http://www.sh1no.icu/avr.png",
-        "link": "http://www.sh1no.icu/",
-        "name": "Shino"
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
+        "link": "https://www.cnblogs.com/IrisHyaline",
+        "name": "IrisHyaline"
+    },
+    {
+        "avatar": "https://malossov.github.io/uploads/avator.png",
+        "link": "https://malossov.github.io/",
+        "name": "Malossov"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
