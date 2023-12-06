@@ -27,7 +27,7 @@ const FeatureList = [
       <>
         Most familiar with C/C++ Java Kotlin.<br/>
         Also understands Python C# and so on.<br/>
-        Active contributor of <a href="https://cppreference.com">cppreference</a>.<br/>
+        Enthusiastic contributor of <a href="https://cppreference.com">cppreference</a>.<br/>
         Treats programming as a life-long hobby.
       </>
     ),
@@ -37,9 +37,9 @@ const FeatureList = [
     img: require('@site/static/img/crafting_table.webp').default,
     description: (
       <>
-        Faithful Minecraft player for a decade.<br/>  
-        <del>Once amateur</del> now cloud cber and modder.<br/>
-        Enthusiastic server owner. Tech modpack lover.<br/>
+        Faithful Minecraft player over a decade.<br/>  
+        Cloud CBer and amateur modder.<br/>
+        Server owner. Tech modpack lover.<br/>
         As well as a Terrarian for long.
       </>
     ),
