@@ -50,6 +50,8 @@ const config = {
           showReadingTime: true,
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          blogSidebarTitle: '博客列表',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
