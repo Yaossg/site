@@ -83,21 +83,6 @@ const FriendList = [
         "name": "KunoSayo"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
-        "link": "https://izzel.io/",
-        "name": "IzzelAliz"
-    },
-    {
-        "avatar": "./img/no-avatar.svg",
-        "link": ".",
-        "name": ""
-    },
-    {
-        "avatar": "./img/no-avatar.svg",
-        "link": ".",
-        "name": ""
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
         "link": "https://4ever-xxxl.github.io/",
         "name": "xlykle"
@@ -148,7 +133,7 @@ const FriendList = [
         "name": "X. C. C. Y."
     },
     {
-        "avatar": "https://image.foxsuzuran.top/images/2023/04/14/QQ20230108024840.jpg",
+        "avatar": "https://avatars.githubusercontent.com/u/61049305?v=4",
         "link": "https://blog.foxsuzuran.top/",
         "name": "FoxSuzuran"
     },
@@ -168,9 +153,9 @@ const FriendList = [
         "name": "IgnotusJee"
     },
     {
-        "avatar": "./img/no-avatar.svg",
-        "link": ".",
-        "name": ""
+        "avatar": "https://avatars.githubusercontent.com/u/66125498?v=4",
+        "link": "https://kreap-0.github.io/",
+        "name": "Kreap"
     },
 ]
 
