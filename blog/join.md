@@ -156,6 +156,8 @@ natural join S
 
 这两种方法在关联容器（即有序和无序的 `set` 和 `dict`）的构造中相当有用，在表连接中也是如此。
 
+如果其中一个关系在连接键上有索引，则可以直接采取 Index Nested Loop Join，否则则需要进行下面两种额外的工作。
+
 ### Sort-Merge Join
 
 对 $R$ 和 $S$ 按照等值连接所需键排序，随后分别遍历两个关系；当遇到左右等值时，将等值的区间取出求笛卡尔积。
@@ -200,7 +202,7 @@ def smj(R, S, cmp):
         yield from map(join, itertools.product(rc, sc))
 ```
 
-如果这两个关系上原本就有关于值连接所需键的索引，则可以省去排序的环节。如果是唯一索引，则可以更进一步省去笛卡尔积的部分：
+如果连接的键是唯一的，则可以更进一步省去笛卡尔积的部分：
 
 ```python
 def join(r, s):
@@ -222,6 +224,52 @@ def smj(R, S, cmp):
                     return
 
         yield join(r, s)
+```
+
+如果不想编写笛卡尔积的代码，又需要考虑到键不唯一的情况，可以考虑使用迭代器标记恢复之前的过程，但需要谨慎处理其中的边界条件：
+
+```cpp
+struct iterator {
+    int *p = nullptr, *q = nullptr;
+    operator bool() const {
+        return p < q;
+    }
+    int operator*() const {
+        return *p;
+    }
+    iterator& operator++() {
+        ++p;
+        return *this;
+    }
+};
+
+void smj(iterator r, iterator s) {
+    iterator mark;
+    while (r and s) {
+        if (!mark) {
+            while (*r != *s) {
+                if (*r < *s) {
+                    ++r; 
+                    if (!r) return;
+                } else {
+                    ++s;
+                    if (!s) return;
+                }
+            }
+            mark = s;
+        }
+        if (*r == *s) {
+            emit(*r, *s);
+            ++s;
+            if (s) {
+                continue;
+            }
+        } 
+        s = mark;
+        ++r;
+        mark = {};
+    }
+}
 ```
 
 ### Hash Join
