@@ -12,6 +12,13 @@
   box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
 }
 
+.card_shadow {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .1);
+}
+
 .friend-ship img {
   border-radius: 50%;
 }

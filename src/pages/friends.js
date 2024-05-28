@@ -19,7 +19,7 @@ const FriendList = [
     },
     {
         "avatar": "./img/no-avatar.svg",
-        "link": ".",
+        "link": "",
         "name": ""
     },
     {
@@ -53,19 +53,19 @@ const FriendList = [
         "name": "ZzzRemake"
     },
     {
-        "avatar": "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
-        "link": "http://wangcr.top/",
-        "name": "fattyrays"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
         "link": "https://songyu318.github.io/",
         "name": "SoCoco"
     },
     {
-        "avatar": "./img/no-avatar.svg",
-        "link": ".",
-        "name": ""
+        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
+        "link": "orch1d.icu",
+        "name": "Orchid"
+    },
+    {
+        "avatar": "http://www.sh1no.icu/avr.png",
+        "link": "http://www.sh1no.icu/",
+        "name": "Shino"
     },
     {
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
@@ -78,24 +78,19 @@ const FriendList = [
         "name": "Doodle H."
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/32478104",
-        "link": "https://github.com/KunoSayo",
-        "name": "KunoSayo"
+        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
+        "link": "https://my.minecraft.kim/",
+        "name": "HikariLan"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/36410093",
+        "link": "",
+        "name": "XuKaFy"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
         "link": "https://4ever-xxxl.github.io/",
         "name": "xlykle"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/36410093",
-        "link": "https://xukafy.github.io/",
-        "name": "XuKaFy"
-    },
-    {
-        "avatar": "http://www.sh1no.icu/avr.png",
-        "link": "http://www.sh1no.icu/",
-        "name": "Shino"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=640",
@@ -104,7 +99,7 @@ const FriendList = [
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/69978374?v=4",
-        "link": "https://github.com/RisingEntropy",
+        "link": "https://risingentropy.top/",
         "name": "R. Entropy"
     },
     {
@@ -118,14 +113,19 @@ const FriendList = [
         "name": "IrisHyaline"
     },
     {
-        "avatar": "https://malossov.github.io/uploads/avator.png",
-        "link": "https://malossov.github.io/",
-        "name": "Malossov"
+        "avatar": "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
+        "link": "http://wangcr.top/",
+        "name": "fattyrays"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
         "link": "https://je3ter.github.io/",
         "name": "Je3ter"
+    },
+    {
+        "avatar": "https://malossov.github.io/uploads/avator.png",
+        "link": "https://malossov.github.io/",
+        "name": "Malossov"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
@@ -143,6 +143,11 @@ const FriendList = [
         "name": "Edwardssss"
     },
     {
+        "avatar": "https://avatars.githubusercontent.com/u/86053421?v=4",
+        "link": "https://ericzhang1412.github.io/",
+        "name": "EricZhang"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
         "link": "https://ganqiu.github.io/",
         "name": "Ganqiu"
@@ -153,17 +158,42 @@ const FriendList = [
         "name": "IgnotusJee"
     },
     {
+        "avatar": "https://hurrison.com/images/avatar.png",
+        "link": "https://hurrison.com/",
+        "name": "Hurrison"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
+        "link": "https://deepunk.icu/",
+        "name": "DeePunk"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/66125498?v=4",
         "link": "https://kreap-0.github.io/",
         "name": "Kreap"
+    },
+    {
+        "avatar": "https://q.qlogo.cn/g?b=qq&nk=2802159741&s=640",
+        "link": "https://wleukocytec.github.io/",
+        "name": "Leukocyte"
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
     },
 ]
 
 function FriendCard({avatar, link, name}) {
     return (
         <div className={clsx('col col--4', styles.cell)}>
-            <div className={styles.card}>
-                <a href={link}>
+            <div className={link ? styles.card : styles.card_shadow}>
+                <a href={link ? link : undefined}>
                     <div className={styles["friend-ship"]}>
                         <img src={avatar} height="100" width="100"/>
                         <div>
