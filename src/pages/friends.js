@@ -178,9 +178,9 @@ const FriendList = [
         "name": "Leukocyte"
     },
     {
-        "avatar": "./img/no-avatar.svg",
-        "link": "",
-        "name": ""
+        "avatar": "https://petertan303.github.io/img/IMG_8952.JPG",
+        "link": "https://petertan303.github.io/",
+        "name": "PeterTan"
     },
     {
         "avatar": "./img/no-avatar.svg",
