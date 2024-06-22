@@ -75,5 +75,5 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 | 生物群系         | mobSettings.mobSpawnCosts                                    |
 | ---------------- | ------------------------------------------------------------ |
-| soul_sand_valley | skeleton:{energyBudget=0.15,charge=0.7},  <br/>ghast:{energyBudget=0.15,charge=0.7},  <br/>enderman:{energyBudget=0.15,charge=0.7},  <br/>strider:{energyBudget=0.15,charge=0.7} |
-| warped_forest    | enderman:{energyBudget=0.12,charge=1.0}                      |
+| soul_sand_valley | skeleton:\{energyBudget=0.15,charge=0.7},  <br/>ghast:\{energyBudget=0.15,charge=0.7},  <br/>enderman:\{energyBudget=0.15,charge=0.7},  <br/>strider:\{energyBudget=0.15,charge=0.7} |
+| warped_forest    | enderman:\{energyBudget=0.12,charge=1.0}                      |
