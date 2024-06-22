@@ -68,6 +68,21 @@ const FriendList = [
         "name": "Shino"
     },
     {
+        "avatar": "https://ventusvocatflumen.cn/media/avatar/f3b73d668d05c6c494dcc59c70588dd3.jpg",
+        "link": "https://ventusvocatflumen.cn",
+        "name": "V. V. F."
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
+    },
+    {
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
         "link": "https://blog.zapic.moe/",
         "name": "Zapic"
@@ -158,7 +173,7 @@ const FriendList = [
         "name": "IgnotusJee"
     },
     {
-        "avatar": "https://hurrison.com/images/avatar.png",
+        "avatar": "https://hurrison.com/images/avatar.jpg",
         "link": "https://hurrison.com/",
         "name": "Hurrison"
     },
