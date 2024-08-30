@@ -11,7 +11,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Yaossg\'s Site',
-  tagline: 'blog & doc',
+  tagline: 'Blog & Docs',
   url: 'https://yaossg.com',
   baseUrl: '/site/',
   onBrokenLinks: 'throw',
@@ -88,7 +88,7 @@ const config = {
           {
             type: 'doc',
             docId: 'index',
-            label: 'Doc',
+            label: 'Docs',
             position: 'left',
           },
           {

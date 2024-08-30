@@ -58,13 +58,8 @@ const FriendList = [
         "name": "SoCoco"
     },
     {
-        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
-        "link": "orch1d.icu",
-        "name": "Orchid"
-    },
-    {
         "avatar": "http://www.sh1no.icu/avr.png",
-        "link": "http://www.sh1no.icu/",
+        "link": "https://www.sh1no.icu/",
         "name": "Shino"
     },
     {
@@ -73,23 +68,13 @@ const FriendList = [
         "name": "V. V. F."
     },
     {
-        "avatar": "./img/no-avatar.svg",
-        "link": "",
-        "name": ""
-    },
-    {
-        "avatar": "./img/no-avatar.svg",
-        "link": "",
-        "name": ""
-    },
-    {
         "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
         "link": "https://blog.zapic.moe/",
         "name": "Zapic"
     },
     {
         "avatar": "https://assets.doodlehuang.com/myface.png",
-        "link": "https://doodlehuang.com/",
+        "link": "",
         "name": "Doodle H."
     },
     {
@@ -198,9 +183,9 @@ const FriendList = [
         "name": "PeterTan"
     },
     {
-        "avatar": "./img/no-avatar.svg",
-        "link": "",
-        "name": ""
+        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
+        "link": "https://orch1d.icu",
+        "name": "Orchid"
     },
 ]
 

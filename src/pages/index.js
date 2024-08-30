@@ -8,12 +8,20 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
         <img className="hero__substitle" src={require('@site/static/img/sausage-128.png').default} />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <p>路漫漫其修远兮，吾将上下而求索</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </header>
   );
@@ -25,10 +33,8 @@ const FeatureList = [
     img: require('@site/static/img/cpp_logo.png').default,
     description: (
       <>
-        Most familiar with C/C++ Java Kotlin.<br/>
-        Also understands Python C# and so on.<br/>
-        Enthusiastic contributor of <a href="https://cppreference.com">cppreference</a>.<br/>
-        Treats programming as a life-long hobby.
+        A life long programmer.<br/>
+        Programming for fun.
       </>
     ),
   },
@@ -37,10 +43,8 @@ const FeatureList = [
     img: require('@site/static/img/crafting_table.webp').default,
     description: (
       <>
-        Faithful Minecraft player over a decade.<br/>  
-        Cloud CBer and amateur modder.<br/>
-        Server owner. Tech modpack lover.<br/>
-        As well as a Terrarian for long.
+        A faithful Minecraft player.<br/>
+        As well as a Terrarian.
       </>
     ),
   },
@@ -49,8 +53,8 @@ const FeatureList = [
     img: require('@site/static/img/UESTC.png').default,
     description: (
       <>
-        Freshman in School of Information and Communication Engineering, UESTC.<br/>
-        Sophomore in School of Computer Science and Engineering (School of Cybersecurity), UESTC.
+        SICE & SCSE, UESTC.<br/>
+        CNSS DevOps
       </>
     ),
   },
@@ -88,11 +92,13 @@ function HomepageFeatures() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
+    <Layout 
       title={siteConfig.title}
       description={`${siteConfig.title} - ${siteConfig.tagline}`}>
-      <HomepageHeader />
-      <HomepageFeatures />
+      <div className={styles.background}>
+        <HomepageHeader />
+        <HomepageFeatures />
+      </div>
     </Layout>
   );
 }
