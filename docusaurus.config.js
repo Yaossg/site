@@ -115,10 +115,6 @@ const config = {
             title: 'Quick Access',
             items: [
               {
-                label: 'Online End Poem',
-                href: 'https://yaossg.com/end-poem/',
-              },
-              {
                 label: 'Site Source Code',
                 href: 'https://github.com/Yaossg/site',
               },
@@ -128,13 +124,9 @@ const config = {
             title: 'Related Sites',
             items: [
               {
-                label: 'Powered By Docusaurus',
-                href: 'https://docusaurus.io/',
+                label: 'Online End Poem',
+                href: 'https://yaossg.com/end-poem/',
               },
-              {
-                label: 'Support Me Via Afdian',
-                href: 'https://afdian.net/a/Yaossg'
-              }
             ],
           },
         ],
