@@ -18,9 +18,24 @@ const FriendList = [
         "name": "Sebrarin"
     },
     {
-        "avatar": "./img/no-avatar.svg",
+        "avatar": "https://czz.ink/img/avatar.jpg",
+        "link": "https://czz.ink/",
+        "name": "Czz"
+    },
+    {
+        "avatar": "https://45gfg9.net/static/img/avatar.png",
+        "link": "https://45gfg9.net/",
+        "name": "45gfg9"
+    },
+    {
+        "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
+        "link": "https://blog.zapic.moe/",
+        "name": "Zapic"
+    },
+    {
+        "avatar": "https://assets.doodlehuang.com/myface.png",
         "link": "",
-        "name": ""
+        "name": "Doodle H."
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
@@ -63,24 +78,23 @@ const FriendList = [
         "name": "Shino"
     },
     {
-        "avatar": "https://ventusvocatflumen.cn/media/avatar/f3b73d668d05c6c494dcc59c70588dd3.jpg",
-        "link": "https://ventusvocatflumen.cn",
+        "avatar": "https://avatars.githubusercontent.com/u/106670529?v=4",
+        "link": "",
         "name": "V. V. F."
     },
     {
-        "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
-        "link": "https://blog.zapic.moe/",
-        "name": "Zapic"
-    },
-    {
-        "avatar": "https://assets.doodlehuang.com/myface.png",
-        "link": "",
-        "name": "Doodle H."
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
+        "link": "https://izzel.io/",
+        "name": "IzzelAliz"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
         "link": "https://my.minecraft.kim/",
         "name": "HikariLan"
+    },{
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/36410093",
@@ -178,8 +192,8 @@ const FriendList = [
         "name": "Leukocyte"
     },
     {
-        "avatar": "https://petertan303.github.io/img/IMG_8952.JPG",
-        "link": "https://petertan303.github.io/",
+        "avatar": "https://blog.wspdwzh.space/img/IMG_8952.JPG",
+        "link": "https://blog.wspdwzh.space/",
         "name": "PeterTan"
     },
     {
