@@ -38,6 +38,21 @@ const FriendList = [
         "name": "Doodle H."
     },
     {
+        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
+        "link": "https://my.minecraft.kim/",
+        "name": "HikariLan"
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
+    },
+    {
+        "avatar": "./img/no-avatar.svg",
+        "link": "",
+        "name": ""
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
         "link": "https://mrcai.dev/",
         "name": "mrcaidev"
@@ -68,6 +83,11 @@ const FriendList = [
         "name": "ZzzRemake"
     },
     {
+        "avatar": "https://avatars.githubusercontent.com/u/57258888?v=4",
+        "link": "https://ignotusjee.github.io/",
+        "name": "IgnotusJee"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
         "link": "https://songyu318.github.io/",
         "name": "SoCoco"
@@ -81,20 +101,6 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/106670529?v=4",
         "link": "",
         "name": "V. V. F."
-    },
-    {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
-        "link": "https://izzel.io/",
-        "name": "IzzelAliz"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
-        "link": "https://my.minecraft.kim/",
-        "name": "HikariLan"
-    },{
-        "avatar": "./img/no-avatar.svg",
-        "link": "",
-        "name": ""
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/36410093",
@@ -165,11 +171,6 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
         "link": "https://ganqiu.github.io/",
         "name": "Ganqiu"
-    },
-    {
-        "avatar": "https://avatars.githubusercontent.com/u/57258888?v=4",
-        "link": "https://ignotusjee.github.io/",
-        "name": "IgnotusJee"
     },
     {
         "avatar": "https://hurrison.com/images/avatar.jpg",
