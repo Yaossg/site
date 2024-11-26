@@ -2,6 +2,7 @@
 date: 2023-05-09
 tags: 
   - cpp
+  - pl
 ---
 
 # `<experimental/simd>` 初体验
