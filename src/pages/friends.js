@@ -43,12 +43,12 @@ const FriendList = [
         "name": "HikariLan"
     },
     {
-        "avatar": "./img/no-avatar.svg",
+        "avatar": "",
         "link": "",
         "name": ""
     },
     {
-        "avatar": "./img/no-avatar.svg",
+        "avatar": "",
         "link": "",
         "name": ""
     },
@@ -133,11 +133,6 @@ const FriendList = [
         "name": "IrisHyaline"
     },
     {
-        "avatar": "https://q.qlogo.cn/g?b=qq&nk=1515903788&s=140",
-        "link": "http://wangcr.top/",
-        "name": "fattyrays"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
         "link": "https://je3ter.github.io/",
         "name": "Je3ter"
@@ -202,6 +197,11 @@ const FriendList = [
         "link": "https://orch1d.icu",
         "name": "Orchid"
     },
+    {
+        "avatar": "",
+        "link": "",
+        "name": ""
+    },
 ]
 
 function FriendCard({avatar, link, name}) {
@@ -210,7 +210,7 @@ function FriendCard({avatar, link, name}) {
             <div className={link ? styles.card : styles.card_shadow}>
                 <a href={link ? link : undefined}>
                     <div className={styles["friend-ship"]}>
-                        <img src={avatar} height="100" width="100"/>
+                        <img src={avatar ? avatar : "./img/no-avatar.svg"} height="100" width="100"/>
                         <div>
                             <h1>{name}</h1>
                         </div>
