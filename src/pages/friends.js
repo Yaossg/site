@@ -28,7 +28,7 @@ const FriendList = [
         "name": "45gfg9"
     },
     {
-        "avatar": "https://gravatar.loli.net/avatar/d9464e8ea970cefdfb729b7301d04232?s=100&d=mp",
+        "avatar": "https://i.zapic.moe/static/192.png",
         "link": "https://blog.zapic.moe/",
         "name": "Zapic"
     },
@@ -38,19 +38,19 @@ const FriendList = [
         "name": "Doodle H."
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
-        "link": "https://my.minecraft.kim/",
+        "avatar": "https://assets.hikarilan.life/avatar.png",
+        "link": "https://hikarilan.life/",
         "name": "HikariLan"
     },
     {
-        "avatar": "",
-        "link": "",
-        "name": ""
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
+        "link": "https://izzel.io/",
+        "name": "IzzelAliz"
     },
     {
-        "avatar": "",
-        "link": "",
-        "name": ""
+        "avatar": "https://cdn.jsdelivr.net/gh/EricZhang1412/PicGoStorage@master/img/url-JtiDxcHwQYlm1GTf.webp",
+        "link": "https://www.ericzhuestc.site/",
+        "name": "EricZhang"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
@@ -158,19 +158,9 @@ const FriendList = [
         "name": "Edwardssss"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/86053421?v=4",
-        "link": "https://ericzhang1412.github.io/",
-        "name": "EricZhang"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
         "link": "https://ganqiu.github.io/",
         "name": "Ganqiu"
-    },
-    {
-        "avatar": "https://hurrison.com/images/avatar.jpg",
-        "link": "https://hurrison.com/",
-        "name": "Hurrison"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
@@ -196,12 +186,7 @@ const FriendList = [
         "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
         "link": "https://orch1d.icu",
         "name": "Orchid"
-    },
-    {
-        "avatar": "",
-        "link": "",
-        "name": ""
-    },
+    }
 ]
 
 function FriendCard({avatar, link, name}) {
