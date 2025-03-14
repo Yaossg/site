@@ -48,9 +48,9 @@ const FriendList = [
         "name": "IzzelAliz"
     },
     {
-        "avatar": "https://cdn.jsdelivr.net/gh/EricZhang1412/PicGoStorage@master/img/url-JtiDxcHwQYlm1GTf.webp",
-        "link": "https://www.ericzhuestc.site/",
-        "name": "EricZhang"
+        "avatar": "",
+        "link": "",
+        "name": ""
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
@@ -68,11 +68,6 @@ const FriendList = [
         "name": "fullstack-sake"
     },
     {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
-        "link": "https://timlzh.com/",
-        "name": "Timlzh"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/49082837?v=4",
         "link": "https://blog.zbwer.work/",
         "name": "zbwer"
@@ -83,9 +78,39 @@ const FriendList = [
         "name": "ZzzRemake"
     },
     {
+        "avatar": "https://blog.wspdwzh.space/img/IMG_8952.JPG",
+        "link": "https://blog.wspdwzh.space/",
+        "name": "PeterTan"
+    },
+    {
         "avatar": "https://avatars.githubusercontent.com/u/57258888?v=4",
         "link": "https://ignotusjee.github.io/",
         "name": "IgnotusJee"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/64004730?v=4",
+        "link": "https://mkfs.tech/",
+        "name": "caozhanhao"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
+        "link": "https://deepunk.icu/",
+        "name": "DeePunk"
+    },
+    {
+        "avatar": "http://www.sh1no.icu/avr.png",
+        "link": "https://www.sh1no.icu/",
+        "name": "Shino"
+    },
+    {
+        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
+        "link": "https://timlzh.com/",
+        "name": "Timlzh"
+    },
+    {
+        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
+        "link": "https://orch1d.icu",
+        "name": "Orchid"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
@@ -93,9 +118,19 @@ const FriendList = [
         "name": "SoCoco"
     },
     {
-        "avatar": "http://www.sh1no.icu/avr.png",
-        "link": "https://www.sh1no.icu/",
-        "name": "Shino"
+        "avatar": "https://cdn.jsdelivr.net/gh/EricZhang1412/PicGoStorage@master/img/url-JtiDxcHwQYlm1GTf.webp",
+        "link": "https://www.ericzhuestc.site/",
+        "name": "EricZhang"
+    },
+    {
+        "avatar": "https://edwardssss.github.io/user/show_myself.png",
+        "link": "https://edwardssss.github.io/",
+        "name": "Edwardssss"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
+        "link": "https://touhouxingchen.fun/",
+        "name": "X. C. C. Y."
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/106670529?v=4",
@@ -143,29 +178,14 @@ const FriendList = [
         "name": "Malossov"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
-        "link": "https://touhouxingchen.github.io/",
-        "name": "X. C. C. Y."
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/61049305?v=4",
         "link": "https://blog.foxsuzuran.top/",
         "name": "FoxSuzuran"
     },
     {
-        "avatar": "https://edwardssss.github.io/user/show_myself.png",
-        "link": "https://edwardssss.github.io/",
-        "name": "Edwardssss"
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
         "link": "https://ganqiu.github.io/",
         "name": "Ganqiu"
-    },
-    {
-        "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
-        "link": "https://deepunk.icu/",
-        "name": "DeePunk"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/66125498?v=4",
@@ -178,14 +198,9 @@ const FriendList = [
         "name": "Leukocyte"
     },
     {
-        "avatar": "https://blog.wspdwzh.space/img/IMG_8952.JPG",
-        "link": "https://blog.wspdwzh.space/",
-        "name": "PeterTan"
-    },
-    {
-        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
-        "link": "https://orch1d.icu",
-        "name": "Orchid"
+        "avatar": "",
+        "link": "https://hurrison.com/",
+        "name": "Hurrison"
     }
 ]
 
