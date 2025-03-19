@@ -6,7 +6,7 @@ const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
 const math = require('remark-math');
-const katex = require('rehype-katex');
+const katex = [require('rehype-katex'), {strict: false}];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
