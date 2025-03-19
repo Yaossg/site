@@ -35,7 +35,8 @@ const FriendList = [
     {
         "avatar": "https://assets.doodlehuang.com/myface.png",
         "link": "",
-        "name": "Doodle H."
+        "name": "Doodle H.",
+        "no_back_edge": true
     },
     {
         "avatar": "https://assets.hikarilan.life/avatar.png",
@@ -50,7 +51,8 @@ const FriendList = [
     {
         "avatar": "",
         "link": "",
-        "name": ""
+        "name": "",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
@@ -135,72 +137,86 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/106670529?v=4",
         "link": "",
-        "name": "V. V. F."
+        "name": "V. V. F.",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/36410093",
         "link": "",
-        "name": "XuKaFy"
+        "name": "XuKaFy",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/88037744?v=4",
         "link": "https://4ever-xxxl.github.io/",
-        "name": "xlykle"
+        "name": "xlykle",
+        "no_back_edge": true
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=463135821&s=640",
         "link": "https://codeforces.com/profile/lotato",
-        "name": "lotato"
+        "name": "lotato",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/69978374?v=4",
         "link": "https://risingentropy.top/",
-        "name": "R. Entropy"
+        "name": "R. Entropy",
+        "no_back_edge": true
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2083953860&s=640",
         "link": "https://blog.csdn.net/weixin_44111457",
-        "name": "lsr"
+        "name": "lsr",
+        "no_back_edge": true
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
         "link": "https://www.cnblogs.com/IrisHyaline",
-        "name": "IrisHyaline"
+        "name": "IrisHyaline",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/102424651?v=4",
         "link": "https://je3ter.github.io/",
-        "name": "Je3ter"
+        "name": "Je3ter",
+        "no_back_edge": true
     },
     {
         "avatar": "https://malossov.github.io/uploads/avator.png",
         "link": "https://malossov.github.io/",
-        "name": "Malossov"
+        "name": "Malossov",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/61049305?v=4",
         "link": "https://blog.foxsuzuran.top/",
-        "name": "FoxSuzuran"
+        "name": "FoxSuzuran",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
         "link": "https://ganqiu.github.io/",
-        "name": "Ganqiu"
+        "name": "Ganqiu",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/66125498?v=4",
         "link": "https://kreap-0.github.io/",
-        "name": "Kreap"
+        "name": "Kreap",
+        "no_back_edge": true
     },
     {
         "avatar": "https://q.qlogo.cn/g?b=qq&nk=2802159741&s=640",
         "link": "https://wleukocytec.github.io/",
-        "name": "Leukocyte"
+        "name": "Leukocyte",
+        "no_back_edge": true
     },
     {
         "avatar": "",
         "link": "https://hurrison.com/",
-        "name": "Hurrison"
+        "name": "Hurrison",
+        "no_back_edge": true
     }
 ]
 
@@ -226,7 +242,7 @@ function AllFriends() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              {FriendList.map((props, idx) => (
+              {FriendList.filter((props) => !props.no_back_edge).sort(() => Math.random() - 0.5).map((props, idx) => (
                 <FriendCard key={idx} {...props} />
               ))}
             </div>
