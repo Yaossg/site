@@ -6,7 +6,9 @@ tags:
 
 # never say never? ——简介现代类型系统
 
-> 注意：本文之探讨现代类型系统中的一些实践，供大家参考。多有不严谨之处，望学术大佬海涵。
+:::note
+本文之探讨现代类型系统中的一些实践，供大家参考。多有不严谨之处，望学术大佬海涵。
+:::
 
 ## 类型与类型系统
 
@@ -400,4 +402,6 @@ Z <|-- SubQ
 SubQ <|-- Sub
 ```
 
+:::tip
 推荐 BGM：[Never Enough](https://www.bilibili.com/video/BV1sP411p7Hm/)
+:::
