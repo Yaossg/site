@@ -481,20 +481,20 @@ function iota(n, downstream) {
     }
 }
 
-function delegateCancelleable(downstream, fn) {
+function delegateCancellable(downstream, fn) {
     return Object.assign(fn, {
         cancelled: () => downstream.cancelled()
     });
 }
 
 function map(mapper, downstream) {
-    return delegateCancelleable(downstream, item => {
+    return delegateCancellable(downstream, item => {
         downstream(mapper(item));
     });
 }
 
 function filter(predicate, downstream) {
-    return delegateCancelleable(downstream, item => {
+    return delegateCancellable(downstream, item => {
         if (predicate(item)) {
             downstream(item);
         }
@@ -512,7 +512,7 @@ function take(n, downstream) {
 }
 
 function skip(n, downstream) {
-    return delegateCancelleable(downstream, item => {
+    return delegateCancellable(downstream, item => {
         if (n-- <= 0) {
             downstream(item);
         }
@@ -919,7 +919,7 @@ src-->split1["split"]-->map1["map"]-->filter1["filter"]-->merge-->skip-->take-->
 
 - 流水线的调试比较困难，层层嵌套的函数调用栈会让你很难找到问题所在。
 - 流水线的结构会消耗很多内存，有时可能比要处理的数据本身还多，这对 GC 语言来说是不小的负担。
-- 流水线之间的操作无法协作，无法进行整体优化。（如将 `sort` 和 `take` 合并为 top-k 算法）
+- 流水线之间的操作难于协作，无法进行整体优化。（如将 `sort` 和 `take` 合并为 top-k 算法）
 - 流水线库提供的操作有限，强行复用代码丑陋，自己实现则比较麻烦，因此相比循环灵活性受限。
 - 流水线破坏了数据的局部性（尤其是对于小数组而言），这可能会导致缓存失效，性能下降。
 
@@ -937,6 +937,6 @@ src-->split1["split"]-->map1["map"]-->filter1["filter"]-->merge-->skip-->take-->
 
 本文下推流水线部分的灵感来自于 Scala 和 Java 标准库的 `Stream`。两者用于分割的类分别叫做 `Stepper` 和 `Spliterator`。
 
-同为 JVM 语言的 Kotlin 标准库则同时提供了批处理和流水线两种风格的函数（其中流水线采用的是上拉）。
+同为 JVM 语言的 Kotlin 标准库则同时提供了批处理和流水线两种风格的函数。其中流水线 `Sequence` 采用的是上拉。正如它名字所述，与另外两个语言的 `Stream` 不同，`Sequence` 只能串行，不能并行。
 
 本文还有一个姊妹篇：[迭代器的接口对比](./iterator/index.md)，介绍了不同语言的迭代器接口异同。
