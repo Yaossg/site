@@ -656,7 +656,7 @@ iota(10)(map(x => x * x)(filter(x => x % 2 == 0)(skip(1)(take(3)(forEach(console
 ### 扁平化（下）
 
 :::tip
-开始之前，可以先阅读一下 [Lambda Calculus](../docs/lambda) 的介绍。
+开始之前，可以先阅读一下 [Lambda Calculus](https://yaossg.com/site/docs/lambda) 的介绍。
 :::
 
 在流水线倒置之后，循环便从中间的过程中消失了，函数变得异常简单，这也为我们窥视他们的本质提供了一个绝佳的机会。
@@ -673,7 +673,7 @@ function forEach(fn) {
 }
 ```
 
-如果你自己观察，就会发现这其实是 lambda calculus 中的 [eta reduction](../docs/lambda/1#eta-reduction)。
+如果你自己观察，就会发现这其实是 lambda calculus 中的 [eta reduction](https://yaossg.com/site/docs/lambda/1#eta-reduction)。
 
 $$
 \lambda y.xy = x
@@ -695,7 +695,7 @@ function map(mapper) {
 const map = mapper => downstream => item => downstream(mapper(item));
 ```
 
-函数参数的名字并不重要（[alpha reduction](../docs/lambda/1#alpha-reduction)），略去名字可得
+函数参数的名字并不重要（[alpha reduction](https://yaossg.com/site/docs/lambda/1#alpha-reduction)），略去名字可得
 
 ```javascript
 const map = f => g => x => g(f(x));
@@ -939,4 +939,4 @@ src-->split1["split"]-->map1["map"]-->filter1["filter"]-->merge-->skip-->take-->
 
 同为 JVM 语言的 Kotlin 标准库则同时提供了批处理和流水线两种风格的函数（其中流水线采用的是上拉）。
 
-本文还有一个姊妹篇：[迭代器的接口对比](./iterator)，介绍了不同语言的迭代器接口异同。
+本文还有一个姊妹篇：[迭代器的接口对比](./iterator/index.md)，介绍了不同语言的迭代器接口异同。
