@@ -363,6 +363,14 @@ console.log(toArray(flatMap(x => iota(x + 1), iota(3))));
 
 不过套娃的方式还是有点繁琐，我们可以使用链式调用的方式来简化代码。不同的语言对这块的处理方式不尽相同，这里我们给出一个简单的实现。
 
+:::info
+对不了解 JavaScript 的读者来说，这里的代码可能有点难以理解，这里做一点简单的解释。
+
+`Object.assign` 可以把多个对象合并成一个对象。第一个参数是目标对象，后面的参数是源对象。这个函数会把源对象的属性复制到目标对象上，并返回目标对象。
+
+`chain` 函数的作用就是给上游的迭代器添加 `map`、`filter`、`take`、`skip`、`flatMap`、`forEach`、`toArray` 这几个方法，这样就可以链式调用了。
+:::
+
 ```javascript
 function chain(upstream) {
     return Object.assign(upstream, {
@@ -371,10 +379,7 @@ function chain(upstream) {
         take: n => chain(take(n, upstream)),
         skip: n => chain(skip(n, upstream)),
         flatMap: mapper => chain(flatMap(mapper, upstream)),
-        forEach: fn => {
-            forEach(fn, upstream);
-            return upstream;
-        },
+        forEach: fn => forEach(fn, upstream),
         toArray: () => toArray(upstream)
     });
 }
@@ -476,7 +481,7 @@ function iota(n, downstream) {
         if (downstream.cancelled()) {
             return;
         }
-        console.log(`iota: ${i}`);
+        console.log(`iota: ${i}`); // for demonstration
         downstream(i);
     }
 }
@@ -892,9 +897,11 @@ graph LR
 - `map` 和 `filter` 是无状态的，而 `take` 和 `skip` 是有状态的。
 - `map` 和 `filter` 是无序的，而 `take` 和 `skip` 是有序的。
 
-所谓有状态，就是指一个函数的输出依赖于之前的输入。例如 `take` 函数，它需要记录已经处理了多少个元素。在并行化的情况下，这种状态是无法共享的。
+所谓有状态，是指一个函数的输出依赖于之前的输入。例如 `take` 函数，它需要记录已经处理了多少个元素。在并行化的情况下，这种状态是无法共享的。
 
 所谓有序，是指元素之间有顺序关系。例如 `skip` 函数，它跳过的是开头的几个元素。在并行化的情况下，这种顺序是无法保证的。
+
+有状态不一定要求有序，例如如果我们为我们的流水线添加一个 `sort()`，它是有状态的，但是不要求有序。有序一般要求有状态，不然这种序无法体现。
 
 想要解决这个问题，我们就需要在遇到有状态和有序的函数时，将数据进行汇总，处理完之后然后再分发。大致的思路是这样的：
 
