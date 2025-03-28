@@ -1,4 +1,10 @@
-# ASCII
+---
+date: 2024-06-23
+tags:
+  - encoding
+---
+
+# ASCII 和它的朋友们
 
 ASCII（American Standard Code for Information Interchange，美国信息交换标准代码）想必大家都很熟悉了。在远古时期，字符集和编码还没有分的那么开（这也是为什么如今很多人分不清的原因），ASCII 既是字符集，也是编码。
 

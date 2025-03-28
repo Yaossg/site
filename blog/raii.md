@@ -9,6 +9,8 @@ import TabItem from '@theme/TabItem';
 
 # RAII
 
+本文总结了不同语言实现 RAII 的方式。
+
 ## 构造器-析构器
 
 <Tabs>
