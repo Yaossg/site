@@ -52,7 +52,7 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           blogSidebarTitle: '博客列表',
-          blogSidebarCount: 'ALL',
+          blogSidebarCount: 0,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

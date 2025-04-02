@@ -9,6 +9,9 @@ tags:
 
 [之前用非标准的 simd 写过矩阵乘法加速](https://yaossg.com/site/docs/cnss/2#向量化)，近期注意到 C++ 新的 Technical specifications——[Parallelism library extensions v2](https://en.cppreference.com/w/cpp/experimental/parallelism_2) 加入了 [`<experimental/simd>`](https://en.cppreference.com/w/cpp/experimental/simd)。于是我尝试用它重写了一下。
 
+
+<!--truncate-->
+
 ```cpp
 #include <iostream>
 #include <string>

@@ -9,6 +9,8 @@ import TabItem from '@theme/TabItem';
 
 # 字节字符字素字字珠玑
 
+<!--truncate-->
+
 ## 什么是字符集？
 
 字符的集合就叫字符集（character set）。字符在字符集中分配的编号叫做码位或码点（code point）。

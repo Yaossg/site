@@ -7,9 +7,9 @@ tags:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# RAII
+# RAII 对比
 
-本文总结了不同语言实现 RAII 的方式。
+<!--truncate-->
 
 ## 构造器-析构器
 
