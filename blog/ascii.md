@@ -8,6 +8,8 @@ tags:
 
 <!--truncate-->
 
+## ASCII
+
 ASCII（American Standard Code for Information Interchange，美国信息交换标准代码）想必大家都很熟悉了。在远古时期，字符集和编码还没有分的那么开（这也是为什么如今很多人分不清的原因），ASCII 既是字符集，也是编码。
 
 - 作为字符集，它包含了 33 个控制字符和 95 个可打印（printable）字符，对应 0~127 共 128 个码位。

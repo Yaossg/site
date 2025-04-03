@@ -71,18 +71,6 @@ for r in R.tuples():
             yield join(r, s)
 ```
 
-可以通过分块遍历降低 IO 的性能损失
-
-```python
-for rb in R.blocks():
-    for sb in S.blocks():
-        for r in rb:
-            for s in sb:
-                if predicate(r, s):
-                    yield join(r, s)
-```
-
-
 ## 等值连接
 
 ### 形式语言与 SQL

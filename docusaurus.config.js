@@ -53,6 +53,7 @@ const config = {
           rehypePlugins: [katex],
           blogSidebarTitle: '博客列表',
           blogSidebarCount: 0,
+          postsPerPage: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
