@@ -2,6 +2,7 @@
 date: 2024-06-23
 tags: 
   - pl
+  - type
 ---
 
 # never say never? ——简介现代类型系统

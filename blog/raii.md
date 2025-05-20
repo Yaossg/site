@@ -138,8 +138,8 @@ with Locker():
 import "fmt"
 
 func main() {
-	defer fmt.Println("unlock")
-	fmt.Println("lock")
+    defer fmt.Println("unlock")
+    fmt.Println("lock")
 }
 ```
 

@@ -51,7 +51,6 @@ const config = {
           showReadingTime: true,
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          blogSidebarTitle: '博客列表',
           blogSidebarCount: 0,
           postsPerPage: 'ALL',
         },
