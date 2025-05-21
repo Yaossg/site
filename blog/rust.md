@@ -33,11 +33,11 @@ tags:
 
 :::
 
-我们正在讨论并推动 Rust 成为 Linux 内核开发的第二种语言。一年前，Jake Edge [很棒地总结](https://lwn.net/Articles/862018/)了目前为止关于 Rust for Linux[^rust-for-linux] 内核的讨论。我们（确切地说是 Miguel 和 Wedson）在此基础上取得了更大的进展。可以明确的说，我认为这个方向总体上是正确的，值得尝试。我想为此补充一些从[内核峰会的邮箱讨论中](https://lore.kernel.org/ksummit/CANiq72nNKvFqQs9Euy=_McfcHf0-dC_oPB3r8ZJii2L3sfVjaw@mail.gmail.com/)勾勒出的背景故事。
+我们正在讨论并推动 Rust 成为 Linux 内核开发的第二种语言。一年前，Jake Edge 为当时关于 Rust for Linux 内核的讨论作了一个[很好的总结](https://lwn.net/Articles/862018/)。我们（确切地说是 Miguel 和 Wedson）在此基础上取得了更大的进展。可以明确地说，我认为这个方向总体上是正确的，值得尝试。我想为此补充一些从[内核峰会的邮箱讨论中](https://lore.kernel.org/ksummit/CANiq72nNKvFqQs9Euy=_McfcHf0-dC_oPB3r8ZJii2L3sfVjaw@mail.gmail.com/)勾勒出的背景故事。
 
 [^rust-for-linux]: 参见 [https://github.com/Rust-for-Linux](https://github.com/Rust-for-Linux)。
 
-太长不看：我断言，Rust 是想要**提升**编程语言的**抽象**，使之最终将**计算机科学**和**软件工程**学科合二为一，这是一个自这两个原则被创造以来一直有人想要追求的目标。
+太长不看：我断言，Rust 是想要**提升**编程语言的**抽象**，使之最终将**计算机科学**和**软件工程**学科合二为一，这是一个自这两个学科被创造以来一直有人想要追求的目标。
 
 ## 从 ALGOL 说起
 
@@ -51,7 +51,7 @@ tags:
 
 ![](https://dflund.se/~triad/images/Algol-first-copies.jpg)
 
-*第一份 ALGOL 60 规范的副本。曾归隆德大学的 Carl-Erik Fröberg 所有。*
+*ALGOL 60 第一版规范的副本。曾归隆德大学的 Carl-Erik Fröberg 所有。*
 
 :::
 
@@ -80,17 +80,17 @@ setlist(arg,xp)
 }
 ```
 
-这看上去不太像我们认识的那个 C 语言，反而是更像 ALGOL 68。ALGOL 68 相比 ALGOL 60 增加了诸如 IF/FI，DO/OD 之类的构造。写成这样的原因是，Stephen Bourne 是一位很有影响力的 ALGOL 68 贡献者。他创造了[一套宏](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/src/cmd/sh/mac.h)，这样 C 预处理器就可以把它自制的 ALGOL 方言转换成 C。我想这就是有人在 Reddit 上建议提名 *bash* 参加混乱 C 语言大赛[^ioccc]的原因。
+这看上去不太像我们认识的那个 C 语言，反而是更像 ALGOL 68。ALGOL 68 相比 ALGOL 60 增加了诸如 IF/FI，DO/OD 之类的构造。写成这样的原因是，Stephen Bourne 是一位很有影响力的 ALGOL 68 贡献者。他创造了[一套宏](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/src/cmd/sh/mac.h)，这样 C 预处理器就可以把他自制的 ALGOL 方言转换成 C。我想这就是有人在 Reddit 上建议提名 *bash* 参加混乱 C 语言大赛[^ioccc]的原因。
 
 [^ioccc]: 国际Ｃ语言混乱代码大赛（IOCCC, The International Obfuscated C Code Contest）是一项国际程序设计赛事，目标是写出最有创意和最让人难以理解的 C 语言代码。
 
-C 语言在当时还未被广泛接受，这仅是诸多例子中的一个。我们如今都喜欢用的 Bourne Shell 脚本语言，其实也与 ALGOL 68 非常接近。因此 ALGOL 的后继者仍在被使用，且比我们想象的更加广泛。
+C 语言在当时还未被广泛接受，这仅是诸多例子中的一个。我们如今都喜欢用的 Bourne Shell 脚本语言，其实也与 ALGOL 68 非常接近。因此 ALGOL 的后继者在当今的应用比我们想象的更加广泛。
 
-在 1970 年前后，Niklaus Wirth 致力于改进 ALGOL 68 并称改版为 ALGOL W。后来他厌倦了语言委员会进程的迟缓，fork 了 ALGOL 并创造了 [Pascal 编程语言](https://en.wikipedia.org/wiki/Pascal_(programming_language))，并大获成功。在 Wirth 教授在他所著的 IEEE 文章[《软件工程简史》](https://people.inf.ethz.ch/wirth/Miscellaneous/IEEE-Annals.pdf)中发表了对当时时事的看法：举世闻名的[1968 年北约软件工程大会](http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1968.PDF)[^conference]在德国加米施胜利召开，标志着**软件工程（software engineering）** 成为一门独立的学科。而为了解决所谓的[*软件危机*](https://en.wikipedia.org/wiki/Software_crisis)（software crisis）——由新兴的巨大复杂系统带来的问题——他建议**提升**新语言的**抽象**。
+在 1970 年前后，Niklaus Wirth 致力于改进 ALGOL 68 并称改版为 ALGOL W。后来他厌倦了语言委员会进程的迟缓，fork 了 ALGOL 并创造了 [Pascal 编程语言](https://en.wikipedia.org/wiki/Pascal_(programming_language))，并大获成功。Wirth 教授在他所著的 IEEE 文章[《软件工程简史》](https://people.inf.ethz.ch/wirth/Miscellaneous/IEEE-Annals.pdf)中发表了对当时时事的看法：举世闻名的[1968 年北约软件工程大会](http://homepages.cs.ncl.ac.uk/brian.randell/NATO/nato1968.PDF)[^conference]在德国加米施胜利召开，标志着**软件工程（software engineering）** 成为一门独立的学科。而为了解决所谓的[*软件危机*](https://en.wikipedia.org/wiki/Software_crisis)（software crisis）——由新兴的巨大复杂系统带来的问题——他建议**提升**新语言的**抽象**。
 
 [^conference]: 原文中，后文对此有许多别称，如加米施大会、加米施北约大会等；译文中，后文统一译作为北约软件工程大会。
 
-所谓**提升抽象（raise the abstraction）**，就是要在语言中使用更数学，更机器无关的构造。首先要考虑的事低级和高级语言之间的差别：例如 `x = x + 1` 这样简单的操作就算不上高级，它就是一个花哨的汇编指令而已。因为我们可以确信在编译后目标代码里，他会变成某种 *ADD* 指令。然而 `a[i] = x + 1` 就把抽象提升到了*高级语言*的水平。这是因为索引数组需要目标机器的特定知识：如基地址、内存布局等等。这让这条指令更加高级，从而提升了语言的抽象。这里我们不妨假设有许多更高级的抽象存在，我们会在后面的小节中研究这些语言。
+所谓**提升抽象（raise the abstraction）**，就是要在语言中使用更数学，更机器无关的构造。首先要考虑的是低级和高级语言之间的差别：例如 `x = x + 1` 这样简单的操作就算不上高级，它就是一个花哨的汇编指令而已。因为我们可以确信在编译后目标代码里，它会变成某种 *ADD* 指令。然而 `a[i] = x + 1` 就把抽象提升到了*高级语言*的水平。这是因为索引数组需要目标机器的特定知识：如基地址、内存布局等等。这让这条指令更加高级，从而提升了语言的抽象。这里我们不妨假设有许多更高级的抽象存在，我们会在后面的小节中研究这些语言。
 
 北约软件工程大会在 Unix 圈子里很出名，因为 [Douglas McIlroy](https://en.wikipedia.org/wiki/Douglas_McIlroy) 出席并提出了把软件组件化来缓解其日益增长的复杂性。这个想法后来通过 Unix 的管道和过滤器机制得以实现。D-Bus 和类似的组件之间的合作机制都是软件组件化的现代案例——而另一种解决复杂性的方式是让软件不那么脆弱，但这不是本文的重点。
 
@@ -113,11 +113,11 @@ var
     JanuaryDays : set of 1..31;
 ```
 
-也许 Pascal 在真实世界中的应用没有如预期般成功。因而它后来也定义了 *PChar*，即一个以 NULL[^NULL] 结尾的指向字符序列的指针，类似于 C 字符串。然而需要注意的是，Pascal 指针类型永恒不变、不能被转换的：在 Pascal 中，指向整数的指针*总是*指向整数的指针。
+也许 Pascal 在真实世界中的应用没有如预期般成功。因而它后来也定义了 *PChar*，即一个以 NULL[^NULL] 结尾的指向字符序列的指针，类似于 C 字符串。然而需要注意的是，Pascal 的指针类型是永恒不变、不能被转换的：在 Pascal 中，指向整数的指针*总是*指向整数的指针。
 
 [^NULL]: 原文有误，应该是以 NUL 结尾（NUL-terminated）而不是 NULL。前者是空字符，后者是空字符。
 
-从 Wirth 的角度来看，C 语言 “是一次巨大的倒退”[^leap]，他表示“它揭示了大部分人对‘高级语言’这个术语的真正含义几乎没有理解，这个术语变成了一个被误解的流行词”。他将问题归咎于 Unix，他说 Unix “像一个特洛伊木马[^trojan]一样引入了 C 语言”。他进一步详细说明了 C 的实际技术问题：
+从 Wirth 的角度来看，C 语言 “是一次巨大的倒退”[^leap]，他表示“它揭示了大部分人几乎没有掌握‘高级语言’这个术语的真正含义，使之变成了一个被误解的黑话”。他将问题归咎于 Unix，他说 Unix “像一个特洛伊木马[^trojan]一样引入了 C 语言”。他进一步详细说明了 C 的实际技术问题：
 
 [^leap]: 原文是 great leap backward，直译为“大跃退”，Google 可知该词有特殊含义本该直译，但这里为了和谐仍然意译。
 
@@ -161,7 +161,7 @@ var
 
 当然，他心里其实很清楚，这世上除了他自己，再没人能看透这一点：既精通 [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church) 的 λ 演算*又*熟悉 ALGOL 60 的人，全球*惊人地*仅此一人。更令人惊讶的是，居然真的存在这么个人。
 
-Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan Turing[^turing] 博士论文的导师，并且与 Kurt Gödel[^godel] 在同一领域活跃（这几位大佬在各自的文章中互相引用）。lambda 演算与 Bertrand Russell[^russell] 创建的类型集合论以及“逻辑-数学纲领”[^LMP]密切相关，这是另一个领域的历史，这里我们就不展开讨论了。
+Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan Turing[^turing] 博士论文的导师，并且与 Kurt Gödel[^godel] 活跃于同一领域（这几位大佬在各自的文章中互相引用）。lambda 演算与 Bertrand Russell[^russell] 创建的类型集合论以及“逻辑-数学纲领”[^LMP]密切相关，这是另一个领域的历史，这里我们就不展开讨论了。
 
 [^turing]: 阿兰·图灵（[Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing)）是英国数学家、逻辑学家和密码学家，被誉为计算机科学之父。他提出了图灵机的概念，并在二战期间成功破解了德国的恩尼格玛密码。图灵测试是他提出的一个用于判断机器是否具有人类智能的标准。
 
@@ -183,11 +183,11 @@ Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan 
 
 [^fp]: functional programming 也译作泛函编程，这里采用更广为接受的“函数式编程”。
 
-接着，[函数式编程语言](https://en.wikipedia.org/wiki/Functional_programming)*实现*了 lambda 演算。总结了多年来使用 lambda 演算来定义 ALGOL 等语言的经验，得出的核心思想是：只要让语言的语法看起来像 lambda 演算表达式，就算是开了个好头，语义的验证就会很简单明。
+接着，[函数式编程语言](https://en.wikipedia.org/wiki/Functional_programming)*实现*了 lambda 演算。总结了多年来使用 lambda 演算来定义 ALGOL 等语言的经验，得出的核心思想是：只要让语言的语法看起来像 lambda 演算表达式，就算是开了个好头，语义的验证就会很简单明了。
 
 1966 年，Peter Landin 在他的文章[《The Next 700 Programming Languages》](https://www.cs.cmu.edu/~crary/819-f09/Landin66.pdf)中，继续使用 λ 演算来描述 ALGOL 的语法和语义。文中他借由他提出的一种名为 ISWIM（If You See What I Mean）的语言，发明了函数式编程的概念。如你所见，又是经典的冷笑话。ISWIM 是一种带有一些“语法糖”的 λ 演算，因此可以在这个框架的基础上创建出许多不同的语言。Landin 的文章引起了广泛关注，人们的确创造了许多语言，也许没有 700 种，至少目前没有。
 
-他的文章第十节的标题为《消除显式序列化》，其中他开始推测，称可以用 ALGOL 语言玩一种游戏：删除所有 `goto` 语句和标签，让程序变得不那么序列化，即程序计数器只是进入下一行或迭代一个循环。他打趣道：
+他在文章的第十节《消除显式序列化》中开始推测，称可以用 ALGOL 语言玩一种游戏：删除所有 `goto` 语句和标签，让程序变得不那么序列化，即程序计数器只是进入下一行或迭代一个循环。他打趣道：
 
 > 还有什么其它类似的特征？之所以考虑这个问题，是因为事实证明，强调用其它事物来描述事物，与强调不明确的序列化，会毫不意外的导向同样的要求。
 
@@ -198,6 +198,8 @@ Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan 
 [^iswlm]: 原文有误，应该是 ISWIM。
 
 这段话是在发起号召：我们需要创造出类似于 ISWIM 的函数式编程语言，并且我们需要去掉 J 操作符（程序控制流操作符）[^jop]。Landin 没能自己做到这一点。
+
+[^jop]: J 操作符在 ALGOL 语言中用于控制程序的执行流。它可以暂存程序的执行状态，并在需要时恢复到该状态（这种状态现在一般称为延续体 Continuation）。
 
 ## 元语言 ML
 
@@ -262,7 +264,7 @@ ML 语言有一个广受赞誉的优点，那就是它编写的程序像大多�
 
 ## CAML 和 OCaml
 
-1987 年，Ascánder Suárez 在法国国家信息与自动化研究所（INRIA）[重新实现了一个 ML 的编译器和运行时系统](https://caml.inria.fr/about/history.en.html)，并称之为 **CAML**，即 *Categorical Abstract Machine Language*，这是一个双关语，因为它运行在一个虚拟机（Category Abstract Machine）上，并且是 ML 的后裔。它使用的抽象机器是 LLM3 抽象 LISP 机器[^machine]，它又运行在另一台计算机上。它的速度不快。
+1987 年，Ascánder Suárez 在法国国家信息与自动化研究所（INRIA）[用 LISP 重新实现了一个 ML 的编译器和运行时系统](https://caml.inria.fr/about/history.en.html)，并称之为 **CAML**，即 *Categorical Abstract Machine Language*，这是一个双关语，因为它运行在一个虚拟机（Category Abstract Machine）上，并且是 ML 的后裔。它使用的抽象机器是 LLM3 抽象 LISP 机器[^machine]，而它本身又运行在另一台计算机上。它的速度不快。
 
 [^machine]: 这里提到的“LLM3 抽象 LISP 机器”是一种虚拟机，用于执行 Lisp 方言 Le_Lisp 用 LLM3 编译器生成的程序（[参考资料](https://www.dreamsongs.com/Files/HOPL2-Uncut.pdf)）。这里的 LLM 与大语言模型无关。
 
@@ -329,7 +331,7 @@ OCaml 仍然是 ML 的一个方言。所有文件的后缀名都是 `.ml`。OCam
 
 ## 接下来是 Rust
 
-Rust 最初是 Graydon Hoare 2006 年时在 Mozilla 工作之余从事的一个爱好项目。[（Rust 官网）[^mention]提到](https://doc.rust-lang.org/reference/influences.html) OCaml 和 ML 是除了 C/C++ 之外，对 Rust 影响最大的语言。一个经典的例证是 [Rust 的第一个编译器](https://github.com/graydon/rust-prehistory/tree/master/src/boot/fe)是用 OCaml 编写的。除了 Hoare 之外，[Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich)[^brendan] 是这个代码库的一个著名贡献者，他是 Mozilla 项目的创始人之一，也是 JavaScript 的发明者。尽管 Brendan 没有贡献太多代码，但他当时是 Mozilla 的 CTO，这表明当 Mozilla 在 2009 年开始支持该项目时，Rust 已经在该组织中扎根，Eich 的早期贡献是应该被注意到的。（也许中型公司的 CTO 亲自向复杂代码库提交代码其实不是什么新鲜事？谁知道呢？）[^humor]
+Rust 最初是 Graydon Hoare 2006 年时在 Mozilla 工作期间的一个业余爱好项目。[（Rust 官网）[^mention]提到](https://doc.rust-lang.org/reference/influences.html) OCaml 和 ML 是除了 C/C++ 之外，对 Rust 影响最大的语言。一个经典的例证是 [Rust 的第一个编译器](https://github.com/graydon/rust-prehistory/tree/master/src/boot/fe)是用 OCaml 编写的。除了 Hoare 之外，[Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich)[^brendan] 是这个代码库的一个著名贡献者，他是 Mozilla 项目的创始人之一，也是 JavaScript 的发明者。尽管 Brendan 没有贡献太多代码，但他当时是 Mozilla 的 CTO，这表明当 Mozilla 在 2009 年开始支持该项目时，Rust 已经在该组织中扎根，Eich 的早期贡献是应该被注意到的。（也许中型公司的 CTO 亲自向复杂代码库提交代码其实不是什么新鲜事？谁知道呢？）[^humor]
 
 [^mention]: 原文是被动语态，主语省略，直译成汉语略显生硬，遂改成主动语态，补出主语。主语 Rust 官网是根据原文提供的链接推测的。Rust 官网实际上把 OCaml 放在了 C++ 之上，重要性可见一斑。
 
@@ -345,7 +347,7 @@ Rust 的独特之处在于它将“非纯”函数式编程与命令式编程融
 
 Rust 的另一个特色在于它从一开始就编译为目标机器代码，而不是像 Peter Landin 的 ISWIM、ML 和 OCaml 语言那样使用任何类型的虚拟机（Java 或 Python 也是如此）。Graydon 可能是出于直觉做到了这一点，但他在 [2019 年的一篇文章](https://graydon2.dreamwidth.org/264181.html) 中强调了这一点：虚拟机，即使作为中间步骤，也是糟糕的语言工程，通常来说是个*坏主意*。
 
-2013 年，因个人原因，Graydon 辞去了 Rust 的主要负责人职务，他在 [Reddit 上的帖子](https://www.reddit.com/r/rust/comments/7qels2/i_wonder_why_graydon_hoare_the_author_of_rust/)中有详细的说明。
+2013 年，因个人原因，Graydon 辞去了 Rust 的主要负责人职务，他在 [Reddit 上的帖子](https://www.reddit.com/r/rust/comments/7qels2/i_wonder_why_graydon_hoare_the_author_of_rust/)中进行了详细的说明。
 
 与 OCaml 一样，Rust 曾经与单一的编译器[^llvm]有着共生关系。但这种关系正在发生变化，因为现在有第二个基于 GCC 的实现正在开发中。
 
@@ -408,7 +410,7 @@ Rust 让自己成为了一个比 OCaml 更容易进行命令式编程的语言�
 
 Rust 既定目标是提高内存安全性、数据竞争安全性（并发）和类型安全性。文章 [《Safe Systems Programming in Rust》](https://iris-project.org/pdfs/2021-rustbelt-cacm-final.pdf) 坚定而直截了当地展示了这个雄心。Graydon 还在 [2016 年的一篇博文](https://graydon2.dreamwidth.org/247406.html) 中强调了对内存和并发安全性的关注。
 
-但*别搞错了*。当前这些目标，其底层逻辑*完全*与 1958 年到 1968 年 ALGOL 委员会的雄心一致：通过将*计算机编程与形式逻辑结合起来*，来*提升语言的抽象性*。这来自于学术界对该语言的强大支持。
+但*别搞错了*。当前这些目标，其底层逻辑*完全*与 1958 年到 1968 年 ALGOL 委员会的雄心一致：通过*将计算机编程与形式逻辑结合起来*，来*提升语言的抽象性*。这来自于学术界对该语言的强大支持。
 
 这种雄心的一个典型迹象是[资金充足的 RustBelt 项目](https://plv.mpi-sws.org/rustbelt/)，涉及大量学术研究人员，他们都熟悉形式逻辑，并产生了诸如 Ralf Jung 的博士论文 [《Understanding and Evolving the Rust Programming Language》](https://research.ralfj.de/phd/thesis-screen.pdf) 这样的成果。下面，用 Rust Belt 和 Coq 证明助手中的形式逻辑可以得出结论（来自摘要）：
 
@@ -423,7 +425,7 @@ Rust 既定目标是提高内存安全性、数据竞争安全性（并发）和
 
 C 语言无法像 Rust 那样接受同样严格的审查，仅仅是因为它允许各种用法（或滥用），正如 Wirth 从历史的角度出发提到的那样：如果一个类型可以通过强制转换来改变，并且数组索引甚至不是语言的一部分，那么就没有什么好证明的。学者们感兴趣的是 C 的一个定义良好的子集，例如 [eBPF 子集](https://www.kernel.org/doc/html/latest/bpf/index.html)，这也部分解释了对 eBPF 的强烈兴趣：与 Rust 一样，构建环境和语言运行时已经在更严格的约束下定义，因此可以进行形式验证。
 
-在我看来，无论推动它的人是否意识到这一点，Rust 的雄心是完成 ALGOL 委员会作为*首要动力*于 1958 年开始的工作，而 1968 年北约软件工程大会中得出的结论是有必要的：开发一种依赖形式逻辑证明的系统编程语言，来实现 ALGOL 无法实现、Pascal 无法实现、以及所有“也许没有 700 种”[^maybe-not-700]的函数式编程语言所无法实现的目标：将**计算机科学**学科和**软件工程**学科结合成**一个**学科，让两个学科的学者可以共同解决问题。
+在我看来，无论推动它的人是否意识到这一点，Rust 的雄心是完成 ALGOL 委员会作为*首要动力*于 1958 年开始的工作，而 1968 年北约软件工程大会中得出的结论是有必要的：开发一种依赖形式逻辑证明的系统编程语言，来实现 ALGOL 无法实现、Pascal 无法实现、以及所有“也许没有 700 种”[^maybe-not-700]的函数式编程语言所无法实现的目标：将**计算机科学**学科和**软件工程**学科结合成**统一**的学科，让两个学科的学者可以共同解决问题。
 
 [^maybe-not-700]: 原文是 maybe-not-700。这是对前文提到的 Landin 的《The Next 700 Programming Languages》一文，作者打趣说 “也许没有 700 种” 的一种 callback。
 
@@ -431,7 +433,7 @@ C 语言无法像 Rust 那样接受同样严格的审查，仅仅是因为它允
 
 它提供给 Linux 的就是**提升抽象**，以应对 1968 年北约软件工程大会上提出的复杂性问题（如今这些问题由于频繁发生的安全事件而变得愈发显著），从而使 Linux 工程项目更接近计算机科学。
 
-其它提升 Linux（内存、并发）安全性的方式也是可能的：显著增加测试，这是工程学的灵丹妙药。自动化测试在近几年确实有了显著提升。提升实现语言的抽象性和形式验证则是为了让测试变得*不那么*重要。
+其它提升 Linux（内存、并发）安全性的方式也是可能的：显著增加测试，这是工程学的灵丹妙药。自动化测试在近几年确实有了大幅提升。提升实现语言的抽象性和形式验证则是为了让测试变得*不那么*重要。
 
 ## 后记
 
