@@ -147,7 +147,7 @@ var
 
 1966 年，ALGOL 最早的使用者和贡献者之一（与 Peter Naur、Tony Hoare、Niklaus Wirth 有相同地位的）[Peter Landin](https://en.wikipedia.org/wiki/Peter_Landin)，发布了两篇 ACM 期刊的文章，题为《ALGOL 60 与 Church 的 Lambda 记号之间的关联》 [第一部分](https://fi.ort.edu.uy/innovaportal/file/20124/1/22-landin_correspondence-between-algol-60-and-churchs-lambda-notation.pdf) 和 [第二部分](https://dl.acm.org/doi/10.1145/363791.363804)。其中第一篇文章以风趣的冷笑话开头：
 
-> 任何同时熟悉 ALGOL 和 60 Church 的 λ 记号的人都会注意到，
+> 任何同时熟悉 ALGOL 60 和 Church 的 λ 记号的人都会注意到，
 >
 > 在一堆 λ 表达式中，变量与 λ 的绑定方式 
 >
@@ -161,7 +161,7 @@ var
 
 当然，他心里其实很清楚，这世上除了他自己，再没人能看透这一点：既精通 [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church) 的 λ 演算*又*熟悉 ALGOL 60 的人，全球*惊人地*仅此一人。更令人惊讶的是，居然真的存在这么个人。
 
-Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan Turing[^turing] 博士论文的导师，并且与 Kurt Gödel[^godel] 活跃于同一领域（这几位大佬在各自的文章中互相引用）。lambda 演算与 Bertrand Russell[^russell] 创建的类型集合论以及“逻辑-数学纲领”[^LMP]密切相关，这是另一个领域的历史，这里我们就不展开讨论了。
+Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan Turing[^turing] 博士论文的导师，并且与 Kurt Gödel[^godel] 活跃于同一领域（这几位大佬在各自的文章中互相引用）。lambda 演算与 Bertrand Russell[^russell] 创建的类型集合论以及“逻辑—数学纲领”[^LMP]密切相关，这是另一个领域的历史，这里我们就不展开讨论了。
 
 [^turing]: 阿兰·图灵（[Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing)）是英国数学家、逻辑学家和密码学家，被誉为计算机科学之父。他提出了图灵机的概念，并在二战期间成功破解了德国的恩尼格玛密码。图灵测试是他提出的一个用于判断机器是否具有人类智能的标准。
 
@@ -169,7 +169,7 @@ Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan 
 
 [^russell]: 伯特兰·罗素（[Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell)）是英国著名的哲学家、逻辑学家和数学家，因其在数理逻辑和集合论方面的贡献而闻名。以他名字命名的罗素悖论是他在集合论方面的一个重要贡献，揭示了某些集合的自指性问题。
 
-[^LMP]: 逻辑-数学纲领（原文：logical-mathematical programme），是指一种试图将数学和逻辑结合起来的理论框架，旨在通过形式化的方法来理解和解决数学问题。
+[^LMP]: 逻辑—数学纲领（原文：logical-mathematical programme），是指一种试图将数学和逻辑结合起来的理论框架，旨在通过形式化的方法来理解和解决数学问题。
 
 λ 演算（Lambda 演算）之于编程语言定义，就好比正则表达式之于语言*语法*（syntax）一样，不过定义的是*语义*（semantics）。正则表达式可以用正则的语法表达如何解析一段文本，λ 演算的表达式在抽象语法树（AST）的基础上更进一步，表示什么是加法、什么是减法，或什么是按位或。这样的练习在诸如编译器构造的课程中很少得到实践，但其实定义语义才是编程语言定义的内在部分。
 
@@ -272,7 +272,7 @@ ML 语言有一个广受赞誉的优点，那就是它编写的程序像大多�
 
 [^vv]: 原文如此（because it was not written in a virtual machine running a virtual machine）。合理推断作者本意是指 CAML 的虚拟机运行在 LLM3 抽象 LISP 机器上，有两层虚拟机；而 Caml Light 的虚拟机直接运行在 C 语言编写的虚拟机上，只有一层虚拟机。
 
-1995 年，native 编译器 Caml Special Light 横空出世，从此 Caml 编译器生成的字节码可以被编译为目标代码，借助[native *运行时环境*](http://github.com/ocaml/ocaml/tree/trunk/runtime)，在没有虚拟机开销的情况下执行。Didier Rémy、Jérôme Vouillon 和 Jacques Garrigue 继续维护 Caml 的开发。
+1995 年，native 编译器 Caml Special Light 横空出世，从此 Caml 编译器生成的字节码可以被编译为目标代码，借助 [native *运行时环境*](http://github.com/ocaml/ocaml/tree/trunk/runtime)，在没有虚拟机开销的情况下执行。Didier Rémy、Jérôme Vouillon 和 Jacques Garrigue 继续维护 Caml 的开发。
 
 1996 年，Objective Caml 为 Caml 增加了一些面向对象的特性。2011 年，扩展 Caml Special Light 编译器和 ML 的衍生语言（方言）被重新命名为 **OCaml**。从本质上讲，编译器和语言有着共生关系。OCaml 没有第二个实现。
 
@@ -341,7 +341,9 @@ Rust 最初是 Graydon Hoare 2006 年时在 Mozilla 工作期间的一个业余�
 
 尽管当时 Rust 的编译器是 OCaml 代码库，但 Rust 的[第一个文档](https://doc.rust-lang.org/reference/influences.html)提到的更多的却是其它函数式或声明式语言，例如 NIL、Hermes、Erlang、Sather、Newsqueak、Limbo 和 Napier。这些起源的介绍，连同大量对诸如 Joe Armstrong（Erlang 的发明者）等人的引用，在当今的 Rust 文档中已经被淡化了。然而，显而易见的是，Graydon 对历史上的计算机语言有着深厚的兴趣，并坚信它们有东西可以教给我们，他显露出借鉴这些语言，挑选出最好的部分的雄心。用他自己的话说：
 
-> 我一直以来都是一位语言多元主义者——想象一下，我对语言的态度，就像一个孩子喜欢各种各样的积木、乐器或塑料恐龙一样——我认为传教士式的单一语言主义尤其没有益处。
+> 我一直以来都是一位语言多元主义者——想象一下，我对语言的态度，就像一个孩子喜欢各种各样的积木、乐器或塑料恐龙一样——我认为传教士式的单一语言主义尤其没有益处。[^ironic]
+
+[^ironic]: 讽刺的是，如今的 Rust 语言社区似乎与 Graydon 的这种多元主义态度背道而驰，反而表现出一种单一语言主义的倾向。
 
 Rust 的独特之处在于它将“非纯”函数式编程与命令式编程融合在一起，将许多来自 ML 和 OCaml 的概念引入到语言中。
 
