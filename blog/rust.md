@@ -80,7 +80,9 @@ setlist(arg,xp)
 }
 ```
 
-这看上去不太像我们认识的那个 C 语言，反而是更像 ALGOL 68。ALGOL 68 相比 ALGOL 60 增加了诸如 IF/FI，DO/OD 之类的构造。写成这样的原因是，Stephen Bourne 是一位很有影响力的 ALGOL 68 贡献者。他创造了[一套宏](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/src/cmd/sh/mac.h)，这样 C 预处理器就可以把他自制的 ALGOL 方言转换成 C。我想这就是有人在 Reddit 上建议提名 *bash* 参加混乱 C 语言大赛[^ioccc]的原因。
+这看上去不太像我们认识的那个 C 语言，反而是更像 ALGOL 68。ALGOL 68 相比 ALGOL 60 增加了诸如 IF/FI，DO/OD 之类的构造。写成这样的原因是，Stephen Bourne 是一位很有影响力的 ALGOL 68 贡献者。他创造了[一套宏](https://minnie.tuhs.org/cgi-bin/utree.pl?file=V7/usr/src/cmd/sh/mac.h)，这样 C 预处理器就可以把他自制的 ALGOL 方言转换成 C。我想这就是有人在 Reddit 上建议提名 *bash*[^bash] 参加混乱 C 语言大赛[^ioccc]的原因。
+
+[^bash]: 原文有误，*bash* 是 Bourne Again Shell 的缩写，*sh* 才是前文提到的 Bourne Shell 的缩写。
 
 [^ioccc]: 国际Ｃ语言混乱代码大赛（IOCCC, The International Obfuscated C Code Contest）是一项国际程序设计赛事，目标是写出最有创意和最让人难以理解的 C 语言代码。
 
@@ -113,9 +115,9 @@ var
     JanuaryDays : set of 1..31;
 ```
 
-也许 Pascal 在真实世界中的应用没有如预期般成功。因而它后来也定义了 *PChar*，即一个以 NULL[^NULL] 结尾的指向字符序列的指针，类似于 C 字符串。然而需要注意的是，Pascal 的指针类型是永恒不变、不能被转换的：在 Pascal 中，指向整数的指针*总是*指向整数的指针。
+也许 Pascal 在真实世界中的应用没有如预期般成功。因而它后来也定义了 *PChar*，即一个以 NULL 结尾[^NULL]的指向字符序列的指针，类似于 C 字符串。然而需要注意的是，Pascal 的指针类型是永恒不变、不能被转换的：在 Pascal 中，指向整数的指针*总是*指向整数的指针。
 
-[^NULL]: 原文有误，应该是以 NUL 结尾（NUL-terminated）而不是 NULL。前者是空字符，后者是空字符。
+[^NULL]: 原文有误，应该是以 NUL 结尾（NUL-terminated）而不是 NULL。NUL 是空字符（即 `'\0'`），而 NULL 是空指针。
 
 从 Wirth 的角度来看，C 语言 “是一次巨大的倒退”[^leap]，他表示“它揭示了大部分人几乎没有掌握‘高级语言’这个术语的真正含义，使之变成了一个被误解的黑话”。他将问题归咎于 Unix，他说 Unix “像一个特洛伊木马[^trojan]一样引入了 C 语言”。他进一步详细说明了 C 的实际技术问题：
 
@@ -183,7 +185,7 @@ Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan 
 
 [^fp]: functional programming 也译作泛函编程，这里采用更广为接受的“函数式编程”。
 
-接着，[函数式编程语言](https://en.wikipedia.org/wiki/Functional_programming)*实现*了 lambda 演算。总结了多年来使用 lambda 演算来定义 ALGOL 等语言的经验，得出的核心思想是：只要让语言的语法看起来像 lambda 演算表达式，就算是开了个好头，语义的验证就会很简单明了。
+接着，[函数式编程语言](https://en.wikipedia.org/wiki/Functional_programming)（functional programming language）*实现*了 lambda 演算。总结了多年来使用 lambda 演算来定义 ALGOL 等语言的经验，得出的核心思想是：只要让语言的语法看起来像 lambda 演算表达式，就算是开了个好头，语义的验证就会很简单明了。
 
 1966 年，Peter Landin 在他的文章[《The Next 700 Programming Languages》](https://www.cs.cmu.edu/~crary/819-f09/Landin66.pdf)中，继续使用 λ 演算来描述 ALGOL 的语法和语义。文中他借由他提出的一种名为 ISWIM（If You See What I Mean）的语言，发明了函数式编程的概念。如你所见，又是经典的冷笑话。ISWIM 是一种带有一些“语法糖”的 λ 演算，因此可以在这个框架的基础上创建出许多不同的语言。Landin 的文章引起了广泛关注，人们的确创造了许多语言，也许没有 700 种，至少目前没有。
 
@@ -209,7 +211,7 @@ Alonzo Church 是一个数理逻辑和可计算性方面的学者，他是 Alan 
 
 这个语言基于 ISWIM，但去掉了所谓的[*J 操作符*](https://en.wikipedia.org/wiki/J_operator) （程序点操作符）。它是一个领域特定（domain-specific）语言，目的是为了编写[一个叫 LCF 的定理证明工具](https://en.wikipedia.org/wiki/Logic_for_Computable_Functions)。标准 ML 已经被[完全语义规范化](https://smlfamily.github.io/sml97-defn.pdf)并且经过形式验证，在学术界和工业界都很流行。
 
-移除 J 操作符让 ML 成为了一种[声明式语言](https://en.wikipedia.org/wiki/Declarative_programming)，即它不指定语句的执行顺序，而是成为了类似于 Prolog 或者说 Makefile 一类的语言：Makefile 中没有控制流，只有一系列需要求解的条件，以实现到一个完整的目标。
+移除 J 操作符让 ML 成为了一种[声明式语言](https://en.wikipedia.org/wiki/Declarative_programming)（declerative programming language），即它不指定语句的执行顺序，而是成为了类似于 Prolog 或者说 Makefile 一类的语言：Makefile 中没有控制流，只有一系列需要求解的条件，以实现到一个完整的目标。
 
 ML 仍然有一个命令式语言的特性：赋值。此时，一些学者认为 J 操作符和赋值都是不必要的，并开始定义[纯函数式语言](https://en.wikipedia.org/wiki/Purely_functional_programming)，例如 Haskell。我们在这里不考虑它们，它们超出了本文的范围。ML 和我们讨论的其它语言都可以标记为*非纯*：由喜欢纯函数式语言的人发明的一个贬义词。这些人不仅不喜欢命令式语言的序列化秉性，还不喜欢赋值（例如使用关键字 `let`），倾向于用求解抽象实体之间的关系的方式来思考。
 
