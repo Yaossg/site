@@ -49,10 +49,9 @@ const FriendList = [
         "name": "IzzelAliz"
     },
     {
-        "avatar": "",
-        "link": "",
-        "name": "",
-        "no_back_edge": true
+        "avatar": "https://kasuha.com/avatar.webp",
+        "link": "https://kasuha.com/",
+        "name": "Kasuha",
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
