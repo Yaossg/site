@@ -6,6 +6,8 @@ tags:
 
 # 如何判断变量在一个范围内
 
+<!--truncate-->
+
 ### C 家族语言：上界和下界的合取式
 ```c
 if (x >= 0 && x <= 10) {
@@ -19,13 +21,13 @@ if 0 <= x <= 10:
     # x is in range of [0, 10]
 ```
 
-### SQL：英语介词
+### SQL：英语介词 between .. and
 
 ```sql
 select x from table where x between 0 and 10
 ```
 
-### Kotlin：英语介词。。
+### Kotlin：英语介词 in ..
 ```kotlin
 if (x in 0..10) {
     // x is in range of [0, 10]
@@ -49,19 +51,20 @@ if (x is >= 0 and <= 10) {
 
 ### Rust & Swift：模式匹配 Pro
 
+Rust
+
 ```rust
 if let 0..=10 = x {
     // x is in range of [0, 10]
 }
 ```
 
+Swift
+
 ```swift
 if case 0...10 = x {
     // x is in range of [0, 10]
 }
 ```
-
-
-
 
 
