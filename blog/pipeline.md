@@ -663,6 +663,24 @@ iota(10)(map(x => x * x)(filter(x => x % 2 == 0)(skip(1)(take(3)(forEach(console
 
 ### 扁平化（下）
 
+这里我们不妨规定，在这样的流水线中，`flatMap` 的一对多，是从一个元素，映射到一个会调用回调函数多次的源头。
+
+那么 `flatMap` 函数该如何实现？你会惊讶的发现， `mapper(item)` 返回的对象既然本身就是源头，那么直接用于驱动下游，就可以实现扁平化的效果。
+
+```javascript
+function flatMap(mapper) {
+    return downstream => item => {
+        mapper(item)(downstream);
+    };
+}
+
+let result = [];
+iota(3)(flatMap(x => iota(x + 1))(toArray(result)));
+console.log(result);
+```
+
+### 函数式（无类型）
+
 :::tip
 开始之前，可以先阅读一下 [Lambda Calculus](https://yaossg.com/site/docs/lambda) 的介绍。
 :::
@@ -717,9 +735,7 @@ $$
 
 你会意识到这是一种纯粹的函数组合：把 `f` 和 `g` 组合起来，先调用 `f`，然后用结果再调用 `g`。
 
-现在，请你思考一下： `flatMap` 函数该如何定义？
-
-你会发现，`mapper(item)` 返回的对象，实际上就是可以驱动下游的源头。直接将它用于驱动下游，就可以实现扁平化的效果。
+而 `flatMap` 函数的定义：
 
 ```javascript
 function flatMap(mapper) {
@@ -727,10 +743,6 @@ function flatMap(mapper) {
         mapper(item)(downstream);
     };
 }
-
-let result = [];
-iota(3)(flatMap(x => iota(x + 1))(toArray(result)));
-console.log(result);
 ```
 
 也可以写成
@@ -752,6 +764,30 @@ $$
 $$
 
 在这之前，你可能根本不会相信，`f => g => x => g(f(x))` 和 `f => g => x => f(x)(g)` 竟然有这样的含义。
+
+### 函数式（有类型）
+
+本文为了简化讨论，故意选取了无类型标记的 JavaScript 作为演示用的语言。肯定有人好奇，上面提到的这些函数的类型是什么。
+
+为此，这里不加证明的用 Kotlin 给出带类型标记的流水线函数式的形式。
+
+```kotlin
+typealias Downstream<T> = (T) -> Unit
+typealias Action<U, T> = (Downstream<U>) -> Downstream<T>
+typealias Source<T> = (Downstream<T>) -> Unit
+
+fun <T, U> map(mapper: (T) -> U): Action<U, T> {
+    return { downstream -> { element -> downstream(mapper(element)) } }
+}
+
+fun <T, U> flatMap(mapper: (T) -> Source<U>): Action<U, T> {
+    return { downstream -> { element -> mapper(element)(downstream) } }
+}
+
+// 展开后：
+typealias MapType<T, U> = ((T) -> U) -> ((U) -> Unit) -> (T) -> Unit
+typealias FlatMapType<T, U> = ((T) -> ((U) -> Unit) -> Unit) -> ((U) -> Unit) -> (T) -> Unit
+```
 
 
 ### 链式调用（下）(二)
