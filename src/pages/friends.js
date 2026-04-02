@@ -35,13 +35,13 @@ const FriendList = [
     {
         "avatar": "https://assets.doodlehuang.com/myface.png",
         "link": "",
-        "name": "Doodle H.",
+        "name": "Doodle\u200bHuang",
         "no_back_edge": true
     },
     {
-        "avatar": "https://assets.hikarilan.life/avatar.png",
+        "avatar": "https://avatars.githubusercontent.com/u/25865657?v=4",
         "link": "https://hikarilan.life/",
-        "name": "HikariLan"
+        "name": "Hikari\u200bLan"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=754503921&s=640",
@@ -56,7 +56,7 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/78269445?v=4",
         "link": "https://mrcai.dev/",
-        "name": "mrcaidev"
+        "name": "mrcai\u200bdev"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/61999173",
@@ -76,22 +76,22 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/108183563",
         "link": "https://zzzremake.github.io/",
-        "name": "ZzzRemake"
+        "name": "Zzz\u200bRemake"
     },
     {
         "avatar": "https://blog.wspdwzh.space/img/IMG_8952.JPG",
         "link": "https://blog.wspdwzh.space/",
-        "name": "PeterTan"
+        "name": "Peter\u200bTan"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/57258888?v=4",
         "link": "https://ignotusjee.github.io/",
-        "name": "IgnotusJee"
+        "name": "Ignotus\u200bJee"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/64004730?v=4",
         "link": "https://mkfs.tech/",
-        "name": "caozhanhao"
+        "name": "cao\u200bzhanhao"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
@@ -101,17 +101,12 @@ const FriendList = [
     {
         "avatar": "http://www.sh1no.icu/avr.png",
         "link": "https://www.sh1no.icu/",
-        "name": "Shino"
+        "name": "Shino\u200bLeah"
     },
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=2921349622&s=640",
         "link": "https://timlzh.com/",
         "name": "Timlzh"
-    },
-    {
-        "avatar": "https://cdn.jsdelivr.net/gh/worchid39/image_host@main/blog_images/b_3188d41c83900168595b4b2d57916a6a.jpg",
-        "link": "https://orch1d.icu",
-        "name": "Orchid"
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/101344459?v=4",
@@ -121,7 +116,7 @@ const FriendList = [
     {
         "avatar": "https://cdn.jsdelivr.net/gh/EricZhang1412/PicGoStorage@master/img/url-JtiDxcHwQYlm1GTf.webp",
         "link": "https://www.ericzhuestc.site/",
-        "name": "EricZhang"
+        "name": "Eric\u200bZhang"
     },
     {
         "avatar": "https://edwardssss.github.io/user/show_myself.png",
@@ -132,6 +127,17 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/108604218?v=4",
         "link": "https://touhouxingchen.fun/",
         "name": "X. C. C. Y."
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/25076044?v=4",
+        "link": "https://blog.twlmgatito.com/",
+        "name": "Twilight\u200bLemon"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/99107042?v=4",
+        "link": "https://github.com/maaaxinfinity",
+        "name": "Limitee",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/106670529?v=4",
@@ -160,7 +166,7 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/69978374?v=4",
         "link": "https://risingentropy.top/",
-        "name": "R. Entropy",
+        "name": "Rising\u200bEntropy",
         "no_back_edge": true
     },
     {
@@ -172,7 +178,7 @@ const FriendList = [
     {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=3568921382&s=640",
         "link": "https://www.cnblogs.com/IrisHyaline",
-        "name": "IrisHyaline",
+        "name": "Iris\u200bHyaline",
         "no_back_edge": true
     },
     {
@@ -190,7 +196,7 @@ const FriendList = [
     {
         "avatar": "https://avatars.githubusercontent.com/u/61049305?v=4",
         "link": "https://blog.foxsuzuran.top/",
-        "name": "FoxSuzuran",
+        "name": "Fox\u200bSuzuran",
         "no_back_edge": true
     },
     {
@@ -211,15 +217,9 @@ const FriendList = [
         "name": "Leukocyte",
         "no_back_edge": true
     },
-    {
-        "avatar": "",
-        "link": "https://hurrison.com/",
-        "name": "Hurrison",
-        "no_back_edge": true
-    }
 ]
 
-function FriendCard({avatar, link, name}) {
+function FriendCard({avatar, link, name, no_back_edge}) {
     return (
         <div className={clsx('col col--4', styles.cell)}>
             <div className={link ? styles.card : styles.card_shadow}>
@@ -231,6 +231,7 @@ function FriendCard({avatar, link, name}) {
                         </div>
                     </div>
                 </a>
+                {no_back_edge === undefined && <div className={styles['back-badge']}>🔄</div>}
             </div>
         </div>
       );
@@ -241,7 +242,7 @@ function AllFriends() {
         <section className={styles.features}>
           <div className="container">
             <div className="row">
-              {FriendList.filter((props) => !props.no_back_edge).sort(() => Math.random() - 0.5).map((props, idx) => (
+              {FriendList.sort(() => Math.random() - 0.5).map((props, idx) => (
                 <FriendCard key={idx} {...props} />
               ))}
             </div>

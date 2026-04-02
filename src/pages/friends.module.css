@@ -60,3 +60,19 @@
   background: rgba(0, 0, 0, .1);
   transition: all .3s ease;
 }
+
+.card {
+  position: relative;
+}
+
+.card_shadow {
+  position: relative;
+}
+
+.back-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 20px;
+  cursor: default;
+}
