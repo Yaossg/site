@@ -89,11 +89,6 @@ const FriendList = [
         "name": "Ignotus\u200bJee"
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/64004730?v=4",
-        "link": "https://mkfs.tech/",
-        "name": "cao\u200bzhanhao"
-    },
-    {
         "avatar": "http://q1.qlogo.cn/g?b=qq&nk=799138673&s=640",
         "link": "https://deepunk.icu/",
         "name": "DeePunk"
@@ -132,6 +127,12 @@ const FriendList = [
         "avatar": "https://avatars.githubusercontent.com/u/25076044?v=4",
         "link": "https://blog.twlmgatito.com/",
         "name": "Twilight\u200bLemon"
+    },
+    {
+        "avatar": "https://avatars.githubusercontent.com/u/64004730?v=4",
+        "link": "https://github.com/caozhanhao",
+        "name": "cao\u200bzhanhao",
+        "no_back_edge": true
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/99107042?v=4",
@@ -200,12 +201,6 @@ const FriendList = [
         "no_back_edge": true
     },
     {
-        "avatar": "https://avatars.githubusercontent.com/u/112836415?v=4",
-        "link": "https://ganqiu.github.io/",
-        "name": "Ganqiu",
-        "no_back_edge": true
-    },
-    {
         "avatar": "https://avatars.githubusercontent.com/u/66125498?v=4",
         "link": "https://kreap-0.github.io/",
         "name": "Kreap",
@@ -223,7 +218,7 @@ function FriendCard({avatar, link, name, no_back_edge}) {
     return (
         <div className={clsx('col col--4', styles.cell)}>
             <div className={link ? styles.card : styles.card_shadow}>
-                <a href={link ? link : undefined}>
+                <a href={link ? link : undefined} target="_blank">
                     <div className={styles["friend-ship"]}>
                         <img src={avatar ? avatar : "./img/no-avatar.svg"} height="100" width="100"/>
                         <div>
