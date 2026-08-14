@@ -15,7 +15,6 @@ const config = {
   url: 'https://yaossg.com',
   baseUrl: '/site/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/sausage.png',
 
   // deployment
@@ -34,6 +33,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    }
   },
   themes: ['@docusaurus/theme-mermaid'],
 
