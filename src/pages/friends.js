@@ -212,6 +212,17 @@ const FriendList = [
         "name": "Leukocyte",
         "no_back_edge": true
     },
+    {
+        "avatar": "https://cos.aurora5090.com/astral_rider.png",
+        "link": "https://www.cnblogs.com/aurora5090",
+        "name": "Akashi"
+    },
+    {
+        "avatar": "https://oyasumiayumu.github.io/assets/avatar.png",
+        "link": "https://oyasumiayumu.github.io",
+        "name": "A. M. M.",
+        "no_back_edge": true
+    },
 ]
 
 function FriendCard({avatar, link, name, no_back_edge}) {
