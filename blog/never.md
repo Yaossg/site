@@ -295,7 +295,7 @@ g: B -> A
 exit: int -> never
 ```
 
-如果我们想要认为构造出一个返回 `never` 的函数，最简单的方法莫过于
+如果我们想要人为构造出一个返回 `never` 的函数，最简单的方法莫过于
 
 - 调用其它返回 `never` 的函数
 - 死循环
@@ -365,43 +365,55 @@ Z <|-- Sub
 
 ### 结论
 
-讲到这里其实答案已经呼之欲出，根据 `T? = T | null`：
+讲到这里其实答案已经呼之欲出：
 
-令 $T = \varnothing = \text{never}$，那么 $\text{never}? = \varnothing | \text{null} = \text{null}$。
+- 根据 `T? = T | null`；
+- 令 $T = \varnothing = \text{never}$，那么 $\text{never}? = \varnothing | \text{null} = \text{null}$。
+- 也就是说，`never? = null`。
 
-也就是说，`never? = null`。
+因为 `T` 是 `T?` 的子类型，所以我们可以得出：`never` 才是真正的 Bottom Type。同时我们也看到了在这种模型下，`any?` 才是 Top Type。
 
-根据定义，`T` 是 `T?` 的子类型，所以最终我们得出了结论：`never` 才是真正的 Bottom Type。
-
-我们也可以画出一个完整的，带 Nullability 的类图：
+据此我们也可以画出一个完整的，带 Nullability 的类图。需要注意的是，此时 `never?` 虽然是 `T?` 的子类型，但它并不是 `T` 或者 `any` 的子类型。同理，`any` 虽然是 `T` 的父类型，但它并不是 `T?` 或者 `never?` 的父类型。
 
 ```mermaid
 classDiagram
+namespace NullableType {
 class SuperQ["any?"]
-class Super["any"]
 class AQ["A?"]
 class BQ["B?"]
 class CQ["..."]
 class ZQ["Z?"]
+class SubQ["never?"]
+}
+namespace NonnullType {
+class Super["any"]
 class A
 class B
 class C["..."]
 class Z
-class SubQ["never?"]
 class Sub["never"]
+}
 SuperQ <|-- Super
-Super <|-- AQ
-Super <|-- BQ
-Super <|-- CQ
-Super <|-- ZQ
+SuperQ <|-- AQ
+SuperQ <|-- BQ
+SuperQ <|-- CQ
+SuperQ <|-- ZQ
+Super <|-- A
+Super <|-- B
+Super <|-- C
+Super <|-- Z
 AQ <|-- A
 BQ <|-- B
 CQ <|-- C
 ZQ <|-- Z
-A <|-- SubQ
-B <|-- SubQ
-C <|-- SubQ
-Z <|-- SubQ
+AQ <|-- SubQ
+BQ <|-- SubQ
+CQ <|-- SubQ
+ZQ <|-- SubQ
+A <|-- Sub
+B <|-- Sub
+C <|-- Sub
+Z <|-- Sub
 SubQ <|-- Sub
 ```
 
