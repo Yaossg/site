@@ -94,3 +94,7 @@ _结束了？结束了。_
 [WaterKing 的讲解视频](https://www.bilibili.com/video/BV12g41177pg)
 
 [WaterKing 的 1.18 讲解视频](https://www.bilibili.com/video/BV13F411376Q)
+
+## 工具
+
+[DigHog](https://github.com/Yaossg/DigHog) 本作所有图片的来源均出自该模拟器。

@@ -223,6 +223,11 @@ const FriendList = [
         "name": "A. M. M.",
         "no_back_edge": true
     },
+    {
+        "avatar": "https://chongfe.github.io/assets/avatar.jpg",
+        "link": "https://chongfe.github.io/",
+        "name": "Rick5",
+    }
 ]
 
 function FriendCard({avatar, link, name, no_back_edge}) {
