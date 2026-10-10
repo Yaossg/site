@@ -34,7 +34,7 @@ const FriendList = [
     },
     {
         "avatar": "https://assets.doodlehuang.com/myface.png",
-        "link": "",
+        "link": "https://doodlehuang.com/",
         "name": "Doodle\u200bHuang",
         "no_back_edge": true
     },
