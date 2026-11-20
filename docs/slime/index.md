@@ -1,5 +1,5 @@
 ---
-date: 2026-10-16
+slug: /slime
 tags: 
   - mc
   - math
@@ -19,8 +19,6 @@ tags:
 ![](creeper.png)
 
 :::
-
-<!--truncate-->
 
 :::note[应用案例：5×5 史莱姆区块]
 
