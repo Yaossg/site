@@ -114,22 +114,43 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Quick Access',
+            title: 'Website Source Code',
             items: [
               {
-                label: 'Site Source Code',
+                label: 'Github.io Repo',
+                href: 'https://github.com/Yaossg/Yaossg.github.io',
+              },
+              {
+                label: 'Site Repo',
                 href: 'https://github.com/Yaossg/site',
               },
             ]
           },
           {
-            title: 'Related Sites',
+            title: 'Powered by Yaossg',
             items: [
               {
                 label: 'Online End Poem',
                 href: 'https://yaossg.com/end-poem/',
               },
+              {
+                label: 'Potato Jianpu',
+                href: 'https://jianpu.yaossg.com/'
+              }
             ],
+          },
+          {
+            title: 'Initiated by Yaossg',
+            items: [
+              {
+                label: 'UESTC Minecraft Community',
+                href: 'https://www.uestc.world/',
+              },
+              {
+                label: 'UESTC Byte Lib',
+                href: 'https://www.iuestc.com/'
+              }
+            ]
           },
         ],
         copyright: 'Yaossg\'s Site',
